@@ -10,6 +10,11 @@ import urllib2
 import config
 from optparse import OptionParser
 
+complete = False
+progress = None
+fetch_threads = []
+finished_threads = 0
+
 std_headers = {
     'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 6.1; '
         'en-US; rv:1.9.2) Gecko/20100115 Firefox/3.6',
@@ -153,12 +158,10 @@ class ProgressBar:
 
         assert(self.conn_state.elapsed_time > 0)
         avg_speed = dl_len / self.conn_state.elapsed_time
-
         drate = self._get_download_rate(avg_speed)
         pcomp = self._get_percentage_complete(dl_len)
         tleft = self._get_time_left((self.conn_state.filesize - dl_len) /
                                          avg_speed if avg_speed > 0 else 0)
-        
         return {
 			"speed":drate, 
 			"status":pcomp, 
@@ -246,97 +249,109 @@ class FetchData(threading.Thread):
             self.conn_state.save_state(state_fd)
             state_fd.close()
 
-class Pyaxel:
-	complete = False
-	def download(self,url, options):
-		fetch_threads = []
+#Test an entire thread list for alive status
+def is_thread_list_alive(list):
+	for t in list:
+		if t.is_alive() == False :
+			return False
+	return True
+
+def download(url, options=None,callback=None):
+	global progress, complete, fetch_threads
+	if options == None:
+		options = config.Pconfig()
+	try:
+		output_file = url.rsplit("/", 1)[1]   # basename of the url
+
+		if options.output_file != None:
+			output_file = options.output_file
+
+		if output_file == "":
+			print "Invalid URL"
+			sys.exit(1)
+
+		print "Destination = ", output_file
+		sys.stdout.flush()
+		filesize = get_file_size(url)
+		print 'Got filesize = ', filesize
+		sys.stdout.flush()
+		conn_state = ConnectionState(options.num_connections, filesize)
+		pbar = ProgressBar(options.num_connections, conn_state)
+	
+		print 'connection state , progress bar created'
+		sys.stdout.flush()
+		# Checking if we have a partial download available and resume
+		state_file = output_file + ".st"
 		try:
-			output_file = url.rsplit("/", 1)[1]   # basename of the url
-
-			if self.options.output_file != None:
-				output_file = self.options.output_file
-
-			if output_file == "":
-				print "Invalid URL"
-				sys.exit(1)
-
-			print "Destination = ", output_file
-
-			filesize = get_file_size(url)
-
-			conn_state = ConnectionState(self.options.num_connections, filesize)
-			pbar = ProgressBar(self.options.num_connections, conn_state)
-
-			# Checking if we have a partial download available and resume
-			state_file = output_file + ".st"
-			try:
-				os.stat(state_file)
-			except OSError, o:
-				#statefile is missing for all practical purposes
-				pass
-			else:
-				state_fd = file(state_file, "r")
-				conn_state.resume_state(state_fd)
-				state_fd.close()
-
-			print "Need to fetch %s\n" % report_bytes(conn_state.filesize - sum(conn_state.progress))
-			#create output file with a .part extension to indicate partial download
-			out_fd = os.open(output_file+".part", os.O_CREAT | os.O_WRONLY)
-
-			start_offset = 0
-			start_time = time.time()
-			for i in range(self.options.num_connections):
-				# each iteration should spawn a thread.
-				# print start_offset, len_list[i]
-				current_thread = FetchData(i, url, output_file, state_file,
-										   start_offset + conn_state.progress[i],
-										   conn_state)
-				fetch_threads.append(current_thread)
-				current_thread.start()
-				start_offset += conn_state.chunks[i]
-
-			while threading.active_count() > 1:
-				#print "\n",progress
-				end_time = time.time()
-				conn_state.update_time_taken(end_time - start_time)
-				start_time = end_time
-				dwnld_sofar = conn_state.download_sofar()
-				if self.options.max_speed != None and \
-						(dwnld_sofar / conn_state.elapsed_time) > \
-						(self.options.max_speed * 1024):
-					for th in fetch_threads:
-						th.need_to_sleep = True
-						th.sleep_timer = dwnld_sofar / (self.options.max_speed * \
-							1024 - conn_state.elapsed_time)
-
-				self.progress = pbar.display_progress()
-
-			#print pbar.display_progress()
-
-			# at this point we are sure dwnld completed and can delete the
-			# state file and move the dwnld to output file from .part file
-			self.complete = True
-			os.remove(state_file)
-			os.rename(output_file+".part", output_file)
-
-		except KeyboardInterrupt, k:
-			for thread in fetch_threads:
-				thread.need_to_quit = True
-
-		except Exception, e:
-			# TODO: handle other types of errors too.
-			print e
-			for thread in fetch_threads:
-				thread._need_to_quit = True
-
-	def __init__(self,url,options=config.Pconfig()):
-		self.options = options	#Default Configuration
-		print self.options
-		try:
-			general_configuration()#Some initialization code
-			self.download(url, self.options) #Start Download
-
-		except Exception, e:
-			# TODO: handle other types of errors too.
-			print e
+			os.stat(state_file)
+		except OSError, o:
+			#statefile is missing for all practical purposes
 			pass
+		else:
+			state_fd = file(state_file, "r")
+			conn_state.resume_state(state_fd)
+			state_fd.close()
+
+		print "Need to fetch %s\n" % report_bytes(conn_state.filesize - sum(conn_state.progress))
+		sys.stdout.flush()
+		#create output file with a .part extension to indicate partial download
+		out_fd = os.open(output_file+".part", os.O_CREAT | os.O_WRONLY)
+		print 'open result ', out_fd
+		#debug
+
+		start_offset = 0
+		start_time = time.time()
+		for i in range(options.num_connections):
+			# each iteration should spawn a thread.
+			# print start_offset, len_list[i]
+			current_thread = FetchData(i, url, output_file, state_file,
+									   start_offset + conn_state.progress[i],
+									   conn_state)
+			fetch_threads.append(current_thread)
+			current_thread.start()
+			start_offset += conn_state.chunks[i]
+		#This loop runs while the file is being downloaded
+		#and updates the progress of the file download
+		while is_thread_list_alive(fetch_threads):
+			end_time = time.time()
+			conn_state.update_time_taken(end_time - start_time)
+			start_time = end_time
+			''' This is the sleep routine for putting sleep limits
+				Disabled for now
+			dwnld_sofar = conn_state.download_sofar()
+			if options.max_speed != None and \
+					(dwnld_sofar / conn_state.elapsed_time) > \
+					(options.max_speed * 1024):
+				for th in fetch_threads:
+					th.need_to_sleep = True
+					th.sleep_timer = dwnld_sofar / (options.max_speed * \
+						1024 - conn_state.elapsed_time)
+			'''
+			progress = pbar.display_progress()
+			print progress
+			sys.stdout.flush()
+			time.sleep(1)	#Doesnt make sense to eat up resources in updating progress
+			
+		#print pbar.display_progress()
+
+		# at this point we are sure dwnld completed and can delete the
+		# state file and move the dwnld to output file from .part file
+		complete = True
+		if  callback != None:
+			callback()
+		os.remove(state_file)
+		os.rename(output_file+".part", output_file)
+
+	except KeyboardInterrupt, k:
+		for thread in fetch_threads:
+			thread.need_to_quit = True
+
+	except Exception, e:
+		# TODO: handle other types of errors too.
+		print e
+		for thread in fetch_threads:
+			thread._need_to_quit = True
+#Make threads quit
+def quit():
+	for thread in fetch_threads:
+			thread.need_to_quit = True

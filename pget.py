@@ -1,5 +1,10 @@
+#! /usr/bin/python
+import threading
+from time import time
 import sys
-import gnome.ui 
+import gnome.ui
+import config
+import pyaxel
 gnome.init("pget", "0.1")
 try:  
 	import pygtk  
@@ -16,6 +21,17 @@ except:
 
 class Pget:
 	downloadList = gtk.ListStore(str,str,str,str,str,str)
+	workers = []
+	#Initialization routine
+	def __init__( self ):
+		#gtk.timeout_add(500, self.my_timer) # call every half a sec
+		self.commonFolders = gtk.ListStore(str) #Pre load a list of used folders here
+		self.wTree = gtk.glade.XML( "gwget3.glade" )#Load the glade file
+		#Show the main window
+		self.wTree.get_widget("main_window").show()
+		#Connect all signals
+		self.wTree.signal_autoconnect(self)
+		
 	#Browses for a folder location where to save the file
 	def on_new_browse_save_in_button_clicked(self,widget):
 		#Create a folder chooser dialogue
@@ -50,24 +66,66 @@ class Pget:
 		self.combo.set_text_column(0)									#Singe column
 		#show the window
 		self.new_dlg.get_widget("new_window").show()
-		
-	#Initialization routine
-	def __init__( self ):
-		self.commonFolders = gtk.ListStore(str) #Pre load a list of used folders here
-		self.wTree = gtk.glade.XML( "gwget3.glade" )#Load the glade file
-		#Show the main window
-		self.wTree.get_widget("main_window").show()
-		#Connect all signals
-		self.wTree.signal_autoconnect(self)
-		
+	def my_timer(self):
+		if len(self.workers):
+			for worker in self.workers[:]:
+				if(worker.complete() == True):		#remove the worker if download is complete
+					self.workers.remove(worker)
+				else:
+					print worker.progress()
+		return True
+
 	#Start a new download and add it to the queue
 	def on_ok_button_clicked(self,*args):
-		self.url = self.new_dlg.get_widget("url_entry").get_text()		#get the url to download
-		self.saveTo = self.combo.get_active()							#the folder where to save the file
+		url = self.new_dlg.get_widget("url_entry").get_text()		#get the url to download
+		saveTo = self.combo.get_active()							#the folder where to save the file
+		options = config.Pconfig()	#default options
+		if saveTo > -1 :		#if user choose a folder
+			options.output_folder = self.combo.get_model()[saveTo][0]
+		self.combo.destroy()
+		self.combo = None		
+		self.new_dlg.get_widget("new_window").hide()
 		self.new_dlg.get_widget("new_window").destroy()					#destroy the new_download window
+		#Start download job in a new thread
+		w = DownloadWorker().set_url(url).set_options(options)		#Create an instance of the thread
+		w.start()								#Start the thread
+		self.workers.append(w)					#Append the worker to our list
 		
 	def on_main_window_destroy(self,*args):
+		for worker in self.workers:
+			worker.quit()
 		sys.exit(0)
-		
+
+''' This is a wrapper class around the pyaxel
+	script. This exists to provide a non-blocking
+	thread version of pyaxel (which usually runs as a single thread	'''
+class DownloadWorker(threading.Thread):
+	pyaxel = None
+	def set_url(self,url):
+		self.url = url
+		return self
+	def set_options(self,options):
+		self.options = options
+		return self
+	def complete_callback(self):
+		#Function is called when download is completed
+		print 'Download Complete'
+	def run(self):
+		self.pyaxel = pyaxel
+		print self.pyaxel
+		self.pyaxel.download(self.url,self.options,self.complete_callback)
+	def progress(self):
+		if self.pyaxel:
+			return self.pyaxel.progress
+		else:
+			return 'Completed'
+	def complete(self):
+		if self.pyaxel:
+			return self.pyaxel.complete
+		else:
+			return True
+	def quit(self):
+		if self.pyaxel:
+			self.pyaxel.quit()
 p=Pget()
 gtk.main()
