@@ -24,7 +24,7 @@ class Pget:
 	workers = []
 	#Initialization routine
 	def __init__( self ):
-		#gtk.timeout_add(500, self.my_timer) # call every half a sec
+		gtk.timeout_add(500, self.my_timer) # call every half a sec
 		self.commonFolders = gtk.ListStore(str) #Pre load a list of used folders here
 		self.wTree = gtk.glade.XML( "gwget3.glade" )#Load the glade file
 		#Show the main window
@@ -67,12 +67,14 @@ class Pget:
 		#show the window
 		self.new_dlg.get_widget("new_window").show()
 	def my_timer(self):
+		#print '======= NoW', len(self.workers),'========='
+		#print '___________________'
+		sys.stdout.flush()
 		if len(self.workers):
 			for worker in self.workers[:]:
-				if(worker.complete() == True):		#remove the worker if download is complete
+				if(worker.complete == True):		#remove the worker if download is complete
+					print 'something got completed'
 					self.workers.remove(worker)
-				else:
-					print worker.progress()
 		return True
 
 	#Start a new download and add it to the queue
@@ -87,54 +89,20 @@ class Pget:
 		self.new_dlg.get_widget("new_window").hide()
 		self.new_dlg.get_widget("new_window").destroy()					#destroy the new_download window
 		#Start download job in a new thread
-		print 'd2'
-		w = DownloadWorker().set_url(url).set_options(options)		#Create an instance of the thread
-		print 'd3'
+		#print 'd2'
+		w = pyaxel.Download(url,options,self.download_finished_callback)					#Create an instance of the thread
+		#print 'd3'
 		self.workers.append(w)					#Append the worker to our list
-		print 'd4'
+		#print 'd4'
 		w.start()								#Start the thread		
-		print 'is w started ?'
+		print 'd-is w started ?'
 		sys.stdout.flush()
+	def download_finished_callback(self):
+		print 'dl complete'
 	def on_main_window_destroy(self,*args):
 		for worker in self.workers:
 			worker.quit()
 		sys.exit(0)
 
-''' This is a wrapper class around the pyaxel
-	script. This exists to provide a non-blocking
-	thread version of pyaxel (which usually runs as a single thread	'''
-class DownloadWorker(threading.Thread):
-	pyaxel = None
-	def set_url(self,url):
-		self.url = url
-		return self
-	def set_options(self,options):
-		self.options = options
-		return self
-	def complete_callback(self):
-		#Function is called when download is completed
-		print 'Download Complete'
-	def run(self):
-		print 'inside run function'
-		sys.stdout.flush()
-		self.pyaxel = pyaxel
-		print 'l2'
-		sys.stdout.flush()
-		self.pyaxel.download(self.url,self.options,self.complete_callback)
-		print 'l3'
-		sys.stdout.flush()
-	def progress(self):
-		if self.pyaxel:
-			return self.pyaxel.progress
-		else:
-			return 'Completed'
-	def complete(self):
-		if self.pyaxel:
-			return self.pyaxel.complete
-		else:
-			return True
-	def quit(self):
-		if self.pyaxel:
-			self.pyaxel.quit()
 p=Pget()
 gtk.main()
