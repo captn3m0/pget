@@ -19,6 +19,35 @@ std_headers = {
     'Accept-Language': 'en-us,en;q=0.5',
 }
 
+# This function copied from rapidleech source code
+# http://rapidleech.googlecode.com/svn/trunk/classes/http.php
+def get_chunk_size(fsize):
+	if fsize <= 1024 * 1024:
+		return 4096;
+	elif fsize <= 1024 * 1024 * 10:
+		return 4096 * 10;		
+	elif fsize <= 1024 * 1024 * 40:
+		return 4096 * 30;		
+	elif fsize <= 1024 * 1024 * 80:
+		return 4096 * 47;		
+	elif fsize <= 1024 * 1024 * 120:
+		return 4096 * 65;		
+	elif fsize <= 1024 * 1024 * 150:
+		return 4096 * 70;		
+	elif fsize <= 1024 * 1024 * 200:
+		return 4096 * 85;		
+	elif fsize <= 1024 * 1024 * 250:
+		return 4096 * 100;		
+	elif fsize <= 1024 * 1024 * 300:
+		return 4096 * 115;		
+	elif fsize <= 1024 * 1024 * 400:
+		return 4096 * 135;		
+	elif fsize <= 1024 * 1024 * 500:
+		return 4096 * 170;		
+	elif fsize <= 1024 * 1024 * 1000:
+		return 4096 * 200;		
+	return 4096 * 210;
+
 def general_configuration():
 		# General configuration
 		urllib2.install_opener(urllib2.build_opener(urllib2.ProxyHandler()))
@@ -113,27 +142,8 @@ class ProgressBar:
                 ret_str = "%d %s" % (pval, unit_list[i])
                 break
         if len(ret_str) == 0:
-            ret_str = "%d %s." % (int(time_in_secs / mult_list[2]), \
+            ret_str = "%d %s" % (int(time_in_secs / mult_list[2]), \
                                       unit_list[3])
-        return ret_str
-
-    def _get_pbar(self, width):
-        ret_str = "["
-        for i in range(self.n_conn):
-            dots_list = ['=' for j in range((self.conn_state.progress[i] *
-                                             width) /
-                                            self.conn_state.chunks[i])]
-            self.dots[i] = "".join(dots_list)
-            if ret_str == "[":
-                ret_str += self.dots[i]
-            else:
-                ret_str += "|" + self.dots[i]
-            if len(self.dots[i]) < width:
-                ret_str += '>'
-                ret_str += "".join([' ' for i in range(width -
-                                                       len(self.dots[i]) - 1)])
-
-        ret_str += "]"
         return ret_str
 
     def display_progress(self):
@@ -170,6 +180,7 @@ class FetchData(threading.Thread):
         self.sleep_timer = 0
         self.need_to_quit = False
         self.need_to_sleep = False
+        
 
     def run(self):
         # Ready the url object
@@ -191,8 +202,8 @@ class FetchData(threading.Thread):
         # Open the output file
         out_fd = os.open(self.out_file+".part", os.O_WRONLY)
         os.lseek(out_fd, self.start_offset, os.SEEK_SET)
-
-        block_size = 1024
+		#Use an optimal blocksize
+        block_size = get_chunk_size(self.length)
         #indicates if connection timed out on a try
         while self.length > 0:
             if self.need_to_quit:
@@ -236,7 +247,7 @@ class FetchData(threading.Thread):
             state_fd.close()
 
 class Pyaxel:
-	
+	complete = False
 	def download(self,url, options):
 		fetch_threads = []
 		try:
@@ -298,14 +309,13 @@ class Pyaxel:
 						th.sleep_timer = dwnld_sofar / (self.options.max_speed * \
 							1024 - conn_state.elapsed_time)
 
-				print pbar.display_progress()
-				time.sleep(1)
+				self.progress = pbar.display_progress()
 
-			print pbar.display_progress()
+			#print pbar.display_progress()
 
 			# at this point we are sure dwnld completed and can delete the
 			# state file and move the dwnld to output file from .part file
-				
+			self.complete = True
 			os.remove(state_file)
 			os.rename(output_file+".part", output_file)
 
