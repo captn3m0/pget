@@ -1,0 +1,402 @@
+<gconfschemafile>
+ <schemalist>
+
+	<schema>
+	 <key>/schemas/apps/gwget2/convert_links</key>
+	 <applyto>/apps/gwget2/convert_links</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>false</default>
+	 <locale name="C">
+	   <short>Convert Links</short>
+	   <long>Convert to relative links in recursive mode.</long>
+	 </locale>
+	</schema>
+
+	<schema>
+	 <key>/schemas/apps/gwget2/default_height</key>
+	 <applyto>/apps/gwget2/default_height</applyto>
+	 <owner>gwget</owner>
+	 <type>int</type>
+	 <default>200</default>
+	 <locale name="C">
+	   <short></short>
+	   <long></long>
+	 </locale>
+	</schema>
+
+	<schema>
+	 <key>/schemas/apps/gwget2/default_width</key>
+	 <applyto>/apps/gwget2/default_width</applyto>
+	 <owner>gwget</owner>
+	 <type>int</type>
+	 <default>250</default>
+	 <locale name="C">
+	   <short></short>
+	   <long></long>
+	 </locale>
+	</schema>
+	
+	<schema>
+	 <key>/schemas/apps/gwget2/dl_page_requisites</key>
+	 <applyto>/apps/gwget2/dl_page_requisites</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>false</default>
+	 <locale name="C">
+	   <short>Download Page Requisites</short>
+	   <long></long>
+	 </locale>
+	</schema>
+	 
+ 	<schema>
+	 <key>/schemas/apps/gwget2/download_dir</key>
+	 <applyto>/apps/gwget2/download_dir</applyto>
+	 <owner>gwget</owner>
+	 <type>string</type>
+	 <default></default>
+	 <locale name="C">
+	   <short>Default Download Directory</short>
+	   <long></long>
+	 </locale>
+	</schema>
+
+	<schema>
+	 <key>/schemas/apps/gwget2/ask_save_each_dl</key>
+	 <applyto>/apps/gwget2/ask_save_each_dl</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>true</default>
+	 <locale name="C">
+	   <short>Ask where to save each new download</short>
+	   <long>If true, always ask for a destination folder when starting a new download. If false, always save in the default directory without asking the user.</long>
+	 </locale>
+	</schema>
+	 
+
+ 	<schema>
+	 <key>/schemas/apps/gwget2/follow_relative</key>
+	 <applyto>/apps/gwget2/follow_relative</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>false</default>
+	 <locale name="C">
+	   <short>Follow relative links</short>
+	   <long></long>
+	 </locale>
+	</schema>
+	  
+ 	<schema>
+	 <key>/schemas/apps/gwget2/limit_speed</key>
+	 <applyto>/apps/gwget2/limit_speed</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>false</default>
+	 <locale name="C">
+	   <short>Limit maximum speed</short>
+	   <long></long>
+	 </locale>
+	</schema>
+
+ 	<schema>
+	 <key>/schemas/apps/gwget2/limit_simultaneousdownloads</key>
+	 <applyto>/apps/gwget2/limit_simultaneousdownloads</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>false</default>
+	 <locale name="C">
+	   <short>Limit number of simultaneous downloads</short>
+	   <long></long>
+	 </locale>
+	</schema>
+	  
+ 	<schema>
+	 <key>/schemas/apps/gwget2/max_depth</key>
+	 <applyto>/apps/gwget2/max_depth</applyto>
+	 <owner>gwget</owner>
+	 <type>int</type>
+	 <default>0</default>
+	 <locale name="C">
+	   <short>Maximum depth in recursive mode</short>
+	   <long></long>
+	 </locale>
+	</schema>
+	 
+ 	<schema>
+	 <key>/schemas/apps/gwget2/max_speed</key>
+	 <applyto>/apps/gwget2/max_speed</applyto>
+	 <owner>gwget</owner>
+	 <type>int</type>
+	 <default>0</default>
+	 <locale name="C">
+	   <short>Maximum speed limit</short>
+	   <long></long>
+	 </locale>
+	</schema>
+
+ 	<schema>
+	 <key>/schemas/apps/gwget2/max_simultaneousdownloads</key>
+	 <applyto>/apps/gwget2/max_simultaneousdownloads</applyto>
+	 <owner>gwget</owner>
+	 <type>int</type>
+	 <default>0</default>
+	 <locale name="C">
+	   <short>Maximum number of simultaneous downloads</short>
+	   <long></long>
+	 </locale>
+	</schema>
+
+	<schema>
+	 <key>/schemas/apps/gwget2/n_downloads</key>
+	 <applyto>/apps/gwget2/n_downloads</applyto>
+	 <owner>gwget</owner>
+	 <type>int</type>
+	 <default>0</default>
+	 <locale name="C">
+	   <short>Number of downloads</short>
+	   <long></long>
+	 </locale>
+	</schema>
+	 
+	<schema>
+	 <key>/schemas/apps/gwget2/no_create_directories</key>
+	 <applyto>/apps/gwget2/no_create_directories</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>false</default>
+	 <locale name="C">
+	   <short></short>
+	   <long></long>
+	 </locale>
+	</schema>
+		 
+	<schema>
+	 <key>/schemas/apps/gwget2/num_retrys</key>
+	 <applyto>/apps/gwget2/num_retrys</applyto>
+	 <owner>gwget</owner>
+	 <type>int</type>
+	 <default>3</default>
+	 <locale name="C">
+	   <short>Number of retries</short>
+	   <long></long>
+	 </locale>
+	</schema>
+	 
+	<schema>
+	 <key>/schemas/apps/gwget2/position_x</key>
+	 <applyto>/apps/gwget2/position_x</applyto>
+	 <owner>gwget</owner>
+	 <type>int</type>
+	 <default>0</default>
+	 <locale name="C">
+	   <short></short>
+	   <long></long>
+	 </locale>
+	</schema>
+
+	<schema>
+	 <key>/schemas/apps/gwget2/position_y</key>
+	 <applyto>/apps/gwget2/position_y</applyto>
+	 <owner>gwget</owner>
+	 <type>int</type>
+	 <default>0</default>
+	 <locale name="C">
+	   <short></short>
+	   <long></long>
+	 </locale>
+	</schema>
+	
+	<schema>
+	 <key>/schemas/apps/gwget2/resume_at_start</key>
+	 <applyto>/apps/gwget2/resume_at_start</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>false</default>
+	 <locale name="C">
+	   <short>Resume downloads at startup</short>
+	   <long></long>
+	 </locale>
+	</schema>
+
+	<schema>
+	 <key>/schemas/apps/gwget2/open_after_dl</key>
+	 <applyto>/apps/gwget2/open_after_dl</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>false</default>
+	 <locale name="C">
+	   <short>Open the file after download</short>
+	   <long></long>
+	 </locale>
+	</schema>
+
+	<schema>
+	 <key>/schemas/apps/gwget2/view_actual_size</key>
+	 <applyto>/apps/gwget2/view_actual_size</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>true</default>
+	 <locale name="C">
+	   <short></short>
+	   <long></long>
+	 </locale>
+	</schema>
+	 
+ 	<schema>
+	 <key>/schemas/apps/gwget2/view_down_speed</key>
+	 <applyto>/apps/gwget2/view_down_speed</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>true</default>
+	 <locale name="C">
+	   <short>View download speed column</short>
+	   <long></long>
+	 </locale>
+	</schema>
+	
+	<schema>
+	 <key>/schemas/apps/gwget2/view_elapse_time</key>
+	 <applyto>/apps/gwget2/view_elapse_time</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>false</default>
+	 <locale name="C">
+	   <short>View elapsed time column</short>
+	   <long></long>
+	 </locale>
+	</schema>
+	
+ 	<schema>
+	 <key>/schemas/apps/gwget2/view_percentage</key>
+	 <applyto>/apps/gwget2/view_percentage</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>true</default>
+	 <locale name="C">
+	   <short>View percentage column</short>
+	   <long></long>
+	 </locale>
+	</schema>
+	
+ 	<schema>
+	 <key>/schemas/apps/gwget2/view_rem_time</key>
+	 <applyto>/apps/gwget2/view_rem_time</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>true</default>
+	 <locale name="C">
+	   <short>View remaining time column</short>
+	   <long></long>
+	 </locale>
+	</schema>
+	
+ 	<schema>
+	 <key>/schemas/apps/gwget2/view_toolbar</key>
+	 <applyto>/apps/gwget2/view_toolbar</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>true</default>
+	 <locale name="C">
+	   <short>View toolbar</short>
+	   <long>Whether to display the toolbar.</long>
+	 </locale>
+	</schema>
+
+	<schema>
+	 <key>/schemas/apps/gwget2/view_statusbar</key>
+	 <applyto>/apps/gwget2/view_statusbar</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>true</default>
+	 <locale name="C">
+	   <short>View statusbar</short>
+	   <long>Whether to display the statusbar.</long>
+	 </locale>
+	</schema>
+	
+ 	<schema>
+	 <key>/schemas/apps/gwget2/view_total_size</key>
+	 <applyto>/apps/gwget2/view_total_size</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>true</default>
+	 <locale name="C">
+	   <short>View total size column</short>
+	   <long></long>
+	 </locale>
+	</schema>
+
+ 	<schema>
+	 <key>/schemas/apps/gwget2/network_mode</key>
+	 <applyto>/apps/gwget2/network_mode</applyto>
+	 <owner>gwget</owner>
+	 <type>string</type>
+	 <default>direct</default>
+	 <locale name="C">
+	   <short></short>
+	   <long></long>
+	 </locale>
+	</schema>
+	
+	<schema>
+	 <key>/schemas/apps/gwget2/http_proxy</key>
+	 <applyto>/apps/gwget2/http_proxy</applyto>
+	 <owner>gwget</owner>
+	 <type>string</type>
+	 <default></default>
+	 <locale name="c">
+	   <short></short>
+	   <long></long>
+	 </locale>
+	</schema>
+	
+	<schema>
+	 <key>/schemas/apps/gwget2/http_proxy_port</key>
+	 <applyto>/apps/gwget2/http_proxy_port</applyto>
+	 <owner>gwget</owner>
+	 <type>int</type>
+	 <default>8080</default>
+	 <locale name="c">
+	   <short></short>
+	   <long></long>
+	 </locale>
+	</schema>
+	
+	<schema>
+	 <key>/schemas/apps/gwget2/proxy_uses_auth</key>
+	 <applyto>/apps/gwget2/proxy_uses_auth</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>false</default>
+	 <locale name="c">
+	   <short></short>
+	   <long></long>
+	 </locale>
+	</schema>
+	
+	<schema>
+	 <key>/schemas/apps/gwget2/proxy_user</key>
+	 <applyto>/apps/gwget2/proxy_user</applyto>
+	 <owner>gwget</owner>
+	 <type>string</type>
+	 <default></default>
+	 <locale name="c">
+	   <short></short>
+	   <long></long>
+	 </locale>
+	</schema>
+	
+	<schema>
+	 <key>/schemas/apps/gwget2/proxy_password</key>
+	 <applyto>/apps/gwget2/proxy_password</applyto>
+	 <owner>gwget</owner>
+	 <type>string</type>
+	 <default></default>
+	 <locale name="c">
+	   <short></short>
+	   <long></long>
+	 </locale>
+	</schema>
+	
+ </schemalist>
+</gconfschemafile>

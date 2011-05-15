@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glade-interface>
+  <requires lib="gnome"/>
+  <!-- interface-requires gnome 46757.8408 -->
+  <!-- interface-naming-policy toplevel-contextual -->
+  <widget class="GnomeAbout" id="about1">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="border_width">5</property>
+    <property name="icon">gwget.xpm</property>
+    <property name="type_hint">dialog</property>
+    <property name="copyright" translatable="yes">GNU GPL Version 2</property>
+    <property name="comments" translatable="yes">PGet : Download Manager for GNOME using Python</property>
+    <property name="authors">David Sedeño Fernández
+&lt;david@alderia.com&gt;
+Abhay Rana
+&lt;capt.n3m0@gmail.com&gt;		
+</property>
+    <property name="logo">gwget-large.png</property>
+    <accessibility>
+      <atkproperty name="AtkObject::accessible-name" translatable="yes">About Gwget</atkproperty>
+    </accessibility>
+    <signal name="response" handler="on_about1_close" swapped="no"/>
+  </widget>
+</glade-interface>

@@ -1,0 +1,3258 @@
+<gconfschemafile>
+ <schemalist>
+
+	<schema>
+	 <key>/schemas/apps/gwget2/convert_links</key>
+	 <applyto>/apps/gwget2/convert_links</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>false</default>
+	 <locale name="C">
+	   <short>Convert Links</short>
+	   <long>Convert to relative links in recursive mode.</long>
+	 </locale>
+
+	 <locale name="ar">
+	   <short>تحويل الروابط</short>
+	   <long>Convert to relative links in recursive mode.</long>
+	 </locale>
+
+	 <locale name="bg">
+	   <short>Конвертиране на връзки</short>
+	   <long>Конвертиране до релативни връзки в рекурсивен режим.</long>
+	 </locale>
+
+	 <locale name="ca">
+	   <short>Converteix els enllaços</short>
+	   <long>Converteix a enllaços relatius en mode recursiu.</long>
+	 </locale>
+
+	 <locale name="cs">
+	   <short>Převést odkazy</short>
+	   <long>V rekurzivním režimu převádět na relativní odkazy.</long>
+	 </locale>
+
+	 <locale name="da">
+	   <short>Konvertér links</short>
+	   <long>Konvertér til relative links ved rekursiv tilstand.</long>
+	 </locale>
+
+	 <locale name="de">
+	   <short>Links konvertieren</short>
+	   <long>Konvertierung zu relativen Links im rekursiven Modus.</long>
+	 </locale>
+
+	 <locale name="el">
+	   <short>Μετατροπή δεσμών</short>
+	   <long>Μετατροπή σχετικών δεσμών σε recursive mode.</long>
+	 </locale>
+
+	 <locale name="en_CA">
+	   <short>Convert Links</short>
+	   <long>Convert to relative links in recursive mode.</long>
+	 </locale>
+
+	 <locale name="en_GB">
+	   <short>Convert Links</short>
+	   <long>Convert to relative links in recursive mode.</long>
+	 </locale>
+
+	 <locale name="es">
+	   <short>Convertir enlaces</short>
+	   <long>Convertir a enlaces relativos en modo recursivo.</long>
+	 </locale>
+
+	 <locale name="eu">
+	   <short>Bihurtu estekak</short>
+	   <long>Bihurtu esteka erlatiboak modu errekurtsiboan.</long>
+	 </locale>
+
+	 <locale name="fi">
+	   <short>Muunna linkit</short>
+	   <long>Muunna suhteellisiksi linkeiksi rekursiivisessa tilassa.</long>
+	 </locale>
+
+	 <locale name="fr">
+	   <short>Convertir les liens</short>
+	   <long>Convertir les liens en relatifs en mode récursif.</long>
+	 </locale>
+
+	 <locale name="hu">
+	   <short>Hivatkozások átalakítása</short>
+	   <long>Relatív hivatkozásokká alakítás rekurzív módban.</long>
+	 </locale>
+
+	 <locale name="it">
+	   <short>Conversione collegamenti</short>
+	   <long>Conversione ricorsiva in collegamenti relativi.</long>
+	 </locale>
+
+	 <locale name="lt">
+	   <short>Konvertuoti nuorodas</short>
+	   <long>Rekursinėje veiksenoje konvertuoti nuorodas į santykines.</long>
+	 </locale>
+
+	 <locale name="ne">
+	   <short>लिङ्कहरू रूपान्तरण गर्नुहोस्</short>
+	   <long>सम्बन्धित लिङ्कहरूलाई पुनरावृत्तिक मोडमा रूपान्तरण गर्नुहोस्</long>
+	 </locale>
+
+	 <locale name="nl">
+	   <short>Links omzetten</short>
+	   <long>Naar relatieve links omzetten in recursieve modus.</long>
+	 </locale>
+
+	 <locale name="pl">
+	   <short>Konwersja odnośniki</short>
+	   <long>Konwersja na relatywne odnośniki w trybie rekursywnym.</long>
+	 </locale>
+
+	 <locale name="pt_BR">
+	   <short>Converter Links</short>
+	   <long>Converte para links relativos em modo recursivo.</long>
+	 </locale>
+
+	 <locale name="sk">
+	   <short>Konvertovať odkazy</short>
+	   <long>Konvertovať na relatívne odkazy v rekurzívnom režime.</long>
+	 </locale>
+
+	 <locale name="sq">
+	   <short>Shndërro Lidhjet</short>
+	   <long>Shndërro ripërsëritshëm në lidhje relative.</long>
+	 </locale>
+
+	 <locale name="sv">
+	   <short>Konventera länkar</short>
+	   <long>Konventera till relativa länkar i rekursivt läge.</long>
+	 </locale>
+
+	 <locale name="uk">
+	   <short>Перетворювати посилання</short>
+	   <long>У рекурсивному режимі перетворювати посилання на відносні.</long>
+	 </locale>
+
+	 <locale name="vi">
+	   <short>Chuyển đổi liên kết</short>
+	   <long>Chuyển đổi sang liên kết tương đối trong chế độ đệ qui.</long>
+	 </locale>
+
+	 <locale name="zh_CN">
+	   <short>转换链接</short>
+	   <long>在递归模式中转换相对链接。</long>
+	 </locale>
+
+	 <locale name="zh_HK">
+	   <short>轉換連結</short>
+	   <long>在遞迴模式中轉換為相對連結。</long>
+	 </locale>
+
+	 <locale name="zh_TW">
+	   <short>轉換連結</short>
+	   <long>在遞迴模式中轉換為相對連結。</long>
+	 </locale>
+	</schema>
+
+	<schema>
+	 <key>/schemas/apps/gwget2/default_height</key>
+	 <applyto>/apps/gwget2/default_height</applyto>
+	 <owner>gwget</owner>
+	 <type>int</type>
+	 <default>200</default>
+	 <locale name="C">
+	   <short></short>
+	   <long></long>
+	 </locale>
+	</schema>
+
+	<schema>
+	 <key>/schemas/apps/gwget2/default_width</key>
+	 <applyto>/apps/gwget2/default_width</applyto>
+	 <owner>gwget</owner>
+	 <type>int</type>
+	 <default>250</default>
+	 <locale name="C">
+	   <short></short>
+	   <long></long>
+	 </locale>
+	</schema>
+	
+	<schema>
+	 <key>/schemas/apps/gwget2/dl_page_requisites</key>
+	 <applyto>/apps/gwget2/dl_page_requisites</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>false</default>
+	 <locale name="C">
+	   <short>Download Page Requisites</short>
+	   <long></long>
+	 </locale>
+
+	 <locale name="ar">
+	   <short>تنزيل صفحة المتطلبات</short>
+	   
+	 </locale>
+
+	 <locale name="bg">
+	   <short>Страницата за изтегляне изисква</short>
+	   
+	 </locale>
+
+	 <locale name="ca">
+	   <short>Requisits de la pàgina de descàrrega</short>
+	   
+	 </locale>
+
+	 <locale name="cs">
+	   <short>Stáhnout, co stránka vyžaduje</short>
+	   
+	 </locale>
+
+	 <locale name="da">
+	   <short>Krav på overførselsside</short>
+	   
+	 </locale>
+
+	 <locale name="de">
+	   <short>Seiteninhalte herunterladen</short>
+	   
+	 </locale>
+
+	 <locale name="el">
+	   <short>Λήψη απαιτούμενων σελίδας</short>
+	   
+	 </locale>
+
+	 <locale name="en_CA">
+	   <short>Download Page Requisites</short>
+	   
+	 </locale>
+
+	 <locale name="en_GB">
+	   <short>Download Page Requisites</short>
+	   
+	 </locale>
+
+	 <locale name="es">
+	   <short>Descargar requisitos de la página</short>
+	   
+	 </locale>
+
+	 <locale name="eu">
+	   <short>Deskargatu orriaren nahitaezkoak</short>
+	   
+	 </locale>
+
+	 <locale name="fi">
+	   <short>Hae sivun riippuvuudet</short>
+	   
+	 </locale>
+
+	 <locale name="fr">
+	   <short>Télécharger les pages requises</short>
+	   
+	 </locale>
+
+	 <locale name="hu">
+	   <short>Oldal kellékeinek letöltése</short>
+	   
+	 </locale>
+
+	 <locale name="it">
+	   <short>Scarica gli elementi richiesti dalla pagina</short>
+	   
+	 </locale>
+
+	 <locale name="lt">
+	   <short>Atsisiųsti puslapio reikmenis</short>
+	   
+	 </locale>
+
+	 <locale name="ne">
+	   <short>पृष्ठ आवश्यक वस्तुहरू डाउनलोड गर्नुहोस्</short>
+	   
+	 </locale>
+
+	 <locale name="nl">
+	   <short>Paginavereisten downloaden</short>
+	   
+	 </locale>
+
+	 <locale name="pl">
+	   <short>Pobieranie wymagań strony</short>
+	   
+	 </locale>
+
+	 <locale name="pt_BR">
+	   <short>Requisitos da Página de Download</short>
+	   
+	 </locale>
+
+	 <locale name="sk">
+	   <short>Stiahnuť to, čo stránka potrebuje</short>
+	   
+	 </locale>
+
+	 <locale name="sq">
+	   <short>Kushtet e Faqes së Shkarkimit</short>
+	   
+	 </locale>
+
+	 <locale name="sv">
+	   <short>Krav på hämtningssida</short>
+	   
+	 </locale>
+
+	 <locale name="uk">
+	   <short>Реквізити сторінки завантаження</short>
+	   
+	 </locale>
+
+	 <locale name="vi">
+	   <short>Cần thiết cho trang tải về</short>
+	   
+	 </locale>
+
+	 <locale name="zh_CN">
+	   <short>下载页面所需内容</short>
+	   
+	 </locale>
+
+	 <locale name="zh_HK">
+	   <short>下載網頁所需的資料</short>
+	   
+	 </locale>
+
+	 <locale name="zh_TW">
+	   <short>下載網頁所需的資料</short>
+	   
+	 </locale>
+	</schema>
+	 
+ 	<schema>
+	 <key>/schemas/apps/gwget2/download_dir</key>
+	 <applyto>/apps/gwget2/download_dir</applyto>
+	 <owner>gwget</owner>
+	 <type>string</type>
+	 <default></default>
+	 <locale name="C">
+	   <short>Default Download Directory</short>
+	   <long></long>
+	 </locale>
+
+	 <locale name="ar">
+	   <short>مجلد التنزيل الإفتراضي</short>
+	   
+	 </locale>
+
+	 <locale name="bg">
+	   <short>Стандартна папка за запазване на изтегленото</short>
+	   
+	 </locale>
+
+	 <locale name="ca">
+	   <short>Directori de descàrrega predeterminat</short>
+	   
+	 </locale>
+
+	 <locale name="cs">
+	   <short>Implicitní adresář stahování</short>
+	   
+	 </locale>
+
+	 <locale name="da">
+	   <short>Standardoverførselsmappe</short>
+	   
+	 </locale>
+
+	 <locale name="de">
+	   <short>Voreingestellter Download-Ordner</short>
+	   
+	 </locale>
+
+	 <locale name="el">
+	   <short>Προεπιλεγμένος κατάλογος λήψης αρχείων</short>
+	   
+	 </locale>
+
+	 <locale name="en_CA">
+	   <short>Default Download Directory</short>
+	   
+	 </locale>
+
+	 <locale name="en_GB">
+	   <short>Default Download Directory</short>
+	   
+	 </locale>
+
+	 <locale name="es">
+	   <short>Directorio de descarga predeterminado</short>
+	   
+	 </locale>
+
+	 <locale name="eu">
+	   <short>Lehenetsitako deskarga-direktorioa</short>
+	   
+	 </locale>
+
+	 <locale name="fi">
+	   <short>Noutojen oletuskansio</short>
+	   
+	 </locale>
+
+	 <locale name="fr">
+	   <short>Répertoire de téléchargements par défaut</short>
+	   
+	 </locale>
+
+	 <locale name="hu">
+	   <short>Alapértelmezett letöltési könyvtár</short>
+	   
+	 </locale>
+
+	 <locale name="it">
+	   <short>Directory di scaricamento predefinita</short>
+	   
+	 </locale>
+
+	 <locale name="lt">
+	   <short>Įprastas parsiuntimo aplankas</short>
+	   
+	 </locale>
+
+	 <locale name="ne">
+	   <short>पूर्वनिर्धारित डाउनलोड डाइरेक्टरी</short>
+	   
+	 </locale>
+
+	 <locale name="nl">
+	   <short>Standaard downloadmap</short>
+	   
+	 </locale>
+
+	 <locale name="pl">
+	   <short>Domyślny katalog pobrań</short>
+	   
+	 </locale>
+
+	 <locale name="pt_BR">
+	   <short>Diretório de Download Padrão</short>
+	   
+	 </locale>
+
+	 <locale name="sk">
+	   <short>Štandardný priečinok na sťahovanie</short>
+	   
+	 </locale>
+
+	 <locale name="sq">
+	   <short>Kartela e Parazgjedhur Shkarkimi</short>
+	   
+	 </locale>
+
+	 <locale name="sv">
+	   <short>Standardhämtningskatalog</short>
+	   
+	 </locale>
+
+	 <locale name="uk">
+	   <short>Каталог для завантаження</short>
+	   
+	 </locale>
+
+	 <locale name="vi">
+	   <short>Thư mục tải về mặc định</short>
+	   
+	 </locale>
+
+	 <locale name="zh_CN">
+	   <short>默认下载目录</short>
+	   
+	 </locale>
+
+	 <locale name="zh_HK">
+	   <short>預設的下載目錄</short>
+	   
+	 </locale>
+
+	 <locale name="zh_TW">
+	   <short>預設的下載目錄</short>
+	   
+	 </locale>
+	</schema>
+
+	<schema>
+	 <key>/schemas/apps/gwget2/ask_save_each_dl</key>
+	 <applyto>/apps/gwget2/ask_save_each_dl</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>true</default>
+	 <locale name="C">
+	   <short>Ask where to save each new download</short>
+	   <long>If true, always ask for a destination folder when starting a new download. If false, always save in the default directory without asking the user.</long>
+	 </locale>
+
+	 <locale name="ar">
+	   
+	   <long>إذا كان صحيحاً,فسئل  أين تحفظ الملفات عند بدأ تنزيل جديد.إذا كان خاطئ,فحفظ الملفات في الدليل الإفتراضي بدون سؤال المستخدم.</long>
+	 </locale>
+
+	 <locale name="bg">
+	   
+	   <long>Ако е включено, винаги да се пита за папка, където да се запазва при стартиране на ново изтегляне. Ако е изключено, винаги запазва в стандартната папка без да се запитва потребителя.</long>
+	 </locale>
+
+	 <locale name="ca">
+	   <short>Demana on desar per a cada descàrrega</short>
+	   <long>Si és cert, sempre que es faci una descàrrega nova, es preguntarà el directori destí. Si és fals, sempre es desaran les descàrregues en el directori predeterminat sense pregunar a l&apos;usuari.</long>
+	 </locale>
+
+	 <locale name="cs">
+	   <short>Ptát se, kam ukládat každé nové stahování</short>
+	   <long>Je-li true, vždy se při spouštění nového stahování ptát na cílový adresář. Je-li false, vždy ukládat do implicitního adrseáře bez ptaní se uživatele.</long>
+	 </locale>
+
+	 <locale name="da">
+	   
+	   <long>Hvis sand, spørg altid om en mål-mappe når en ny overførsel startes. Hvis falsk, gem altid i den forvalgte mappe uden at spørge brugeren.</long>
+	 </locale>
+
+	 <locale name="de">
+	   
+	   <long>Wenn »true«, wird beim Start eines neuen Downloads immer nach einem Zielordner gefragt. Wenn »false«, wird immer in den Vorgabeordner gespeichert, ohne den Benutzer zu fragen.</long>
+	 </locale>
+
+	 <locale name="el">
+	   
+	   <long>Αν true, να γίνεται πάντοτε ερώτηση για φάκελο λήψης αρχείων κατά την εκκίνηση μιας νέας λήψης. Αν false, να γίνεται πάντα αποθήκευση στο προεπιλεγμένο φάκελο χωρίς να ερώταται ο χρήστης.</long>
+	 </locale>
+
+	 <locale name="en_CA">
+	   <short>Ask where to save each new download</short>
+	   <long>If true, always ask for a destination folder when starting a new download. If false, always save in the default directory without asking the user.</long>
+	 </locale>
+
+	 <locale name="en_GB">
+	   <short>_Ask where to save each new download</short>
+	   <long>If true, always ask for a destination folder when starting a new download. If false, always save in the default directory without asking the user.</long>
+	 </locale>
+
+	 <locale name="es">
+	   <short>Preguntar donde guardar cada descarga nueva</short>
+	   <long>Si es «true» pedir siempre una carpeta de destino al iniciar una descarga nueva. Si es  «false» guardar siempre en el directorio predeterminado sin preguntar al usuario.</long>
+	 </locale>
+
+	 <locale name="eu">
+	   <short>Galdetu deskarga berri bakoitza non gorde</short>
+	   <long>Egia bada, deskarga berri bakoitzean galdetu non gorde. Gezurra bada, gorde beti lehenetsitako direktorioan erabiltzaileari galdetu gabe.</long>
+	 </locale>
+
+	 <locale name="fi">
+	   <short>Kysy minne kukin noudettu tiedosto tallennetaan</short>
+	   <long>Jos tosi, kysytään aina kohdekansiota kun aloitetaan uutta noutoa.Jos epätosi, tallennetaan aina oletuskansioon kysymättä käyttäjältä.</long>
+	 </locale>
+
+	 <locale name="fr">
+	   <short>Demander où enregister chaque nouveau téléchargement</short>
+	   <long>Si vrai, toujours demander le répertoire de destination quand un nouveau téléchargement est lancé. Si faux, toujours sauver dans le répertoire par défaut sans demander à l&apos;utilisateur.</long>
+	 </locale>
+
+	 <locale name="hu">
+	   <short>Minden új letöltésnél kérdezzen rá a célmappára</short>
+	   <long>Ha ez igaz, minden új letöltés indításakor rákérdez a célmappára. Ha hamis, kérdés nélkül mindig az alapértelmezett könyvtárba ment.</long>
+	 </locale>
+
+	 <locale name="it">
+	   
+	   <long>Se impostato a &quot;true&quot;, chiede sempre la cartella destinazione quando parte un nuovo scaricamento. Se impostato a &quot;false&quot;, salva sempre nella directory predefinita senza chiederlo all&apos;utente.</long>
+	 </locale>
+
+	 <locale name="lt">
+	   
+	   <long>Jei reikšmė teigiama, pradedant naują siuntimą visada paklausti paskirties aplanko. Jei - neigiama, visada išsaugoti numatytame aplanke, neklausiant naudotojo.</long>
+	 </locale>
+
+	 <locale name="ne">
+	   <short>प्रत्येक डाउनलोडलाईकहाँ बचत गर्ने सोध्नुहोस्</short>
+	   <long>यदि सत्य हो भने, नयाँ डाउनलोड सुरु गर्दा सधै गन्तव्य फोल्डरका लागि सोध्नुहोस्। यदि असत्य हो भने प्रयोगकर्तालाई नसोधिकन सधै पूर्वनिर्धारित डाइरेक्टरीमा बचत गर्नुहोस्।</long>
+	 </locale>
+
+	 <locale name="nl">
+	   <short>Bij elke download vragen waarin op te slaan</short>
+	   <long>Indien waar, altijd vragen naar een doelmap bij het starten van een nieuwe download.  Indien onwaar, altijd opslaan in de standaard map zonder eerst de gebruiker te vragen.</long>
+	 </locale>
+
+	 <locale name="pl">
+	   
+	   <long>Jeżeli jest zaznaczone, wtedy pyta o katalog docelowy (gdzie rozpocząć pobieranie). Jeżeli jest odznaczone, zawsze zapisuje pliki w domyślnym katalogu, bez pytania się użytkownika.</long>
+	 </locale>
+
+	 <locale name="sk">
+	   <short>Opýtať sa, kde uložiť každé nové sťahovanie</short>
+	   <long>Ak je true, vždy vyžiadať cieľový priečinok pri začiatku nového sťahovania. Ak je false, vždy uložiť do predvoleného priečinka bez pýtania sa používateľa.</long>
+	 </locale>
+
+	 <locale name="sq">
+	   
+	   <long>Nëse e vërtetë, pyet gjithmonë për një kartelë destinacioni kur fillon një shkarkim të ri. Nëse e rremë, ruaj gjithmonë në kartelën e parazgjedhur pa pyetur përdoruesin.</long>
+	 </locale>
+
+	 <locale name="sv">
+	   <short>Fråga var filen ska sparas för varje ny hämtning</short>
+	   <long>Om sant, fråga alltid efter en målmapp när en ny hämtning påbörjas. Om falskt, spara alltid i standardkatalogen utan att fråga användaren.</long>
+	 </locale>
+
+	 <locale name="uk">
+	   
+	   <long>Якщо встановлено, завжди питати цільову теку при створенні завантаження. Якщо не встановлено, завжди зберігати у типовому цільовому каталозі.</long>
+	 </locale>
+
+	 <locale name="vi">
+	   <short>Hỏi nên lưu mỗi tập tin tải về vào đâu</short>
+	   <long>Nếu đúng thì luôn luôn nhắc nhập thư mục đích khi bắt đầu tải về tập tin mới.
+Còn nếu sai, luôn luôn lưu tập tin tải về vào thư mục mặc định, không hỏi người dùng về gì.</long>
+	 </locale>
+
+	 <locale name="zh_CN">
+	   <short>每个新下载询问保存到哪里</short>
+	   
+	 </locale>
+
+	 <locale name="zh_HK">
+	   <short>每次下載都詢問儲存位置</short>
+	   <long>如設定為‘true’，則每個新的下載都詢問目的地資料夾。 如設定為‘false’，則儲存於預設的資料夾而不詢問使用者。</long>
+	 </locale>
+
+	 <locale name="zh_TW">
+	   <short>每次下載都詢問儲存位置</short>
+	   <long>如設定為‘true’，則每個新的下載都詢問目的地資料夾。 如設定為‘false’，則儲存於預設的資料夾而不詢問使用者。</long>
+	 </locale>
+	</schema>
+	 
+
+ 	<schema>
+	 <key>/schemas/apps/gwget2/follow_relative</key>
+	 <applyto>/apps/gwget2/follow_relative</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>false</default>
+	 <locale name="C">
+	   <short>Follow relative links</short>
+	   <long></long>
+	 </locale>
+
+	 <locale name="ar">
+	   <short>Follow relative links</short>
+	   
+	 </locale>
+
+	 <locale name="bg">
+	   <short>Следване само на релативните връзки</short>
+	   
+	 </locale>
+
+	 <locale name="ca">
+	   <short>Segueix els enllaços relatius</short>
+	   
+	 </locale>
+
+	 <locale name="cs">
+	   <short>Následovat relativní odkazy</short>
+	   
+	 </locale>
+
+	 <locale name="da">
+	   <short>Følg relative links</short>
+	   
+	 </locale>
+
+	 <locale name="de">
+	   <short>Relativen Links folgen</short>
+	   
+	 </locale>
+
+	 <locale name="el">
+	   <short>Ακολούθηση σχετικών δεσμών</short>
+	   
+	 </locale>
+
+	 <locale name="en_CA">
+	   <short>Follow relative links</short>
+	   
+	 </locale>
+
+	 <locale name="en_GB">
+	   <short>Follow relative links</short>
+	   
+	 </locale>
+
+	 <locale name="es">
+	   <short>Seguir sólo enlaces relativos</short>
+	   
+	 </locale>
+
+	 <locale name="eu">
+	   <short>Jarraitu esteka erlatiboak</short>
+	   
+	 </locale>
+
+	 <locale name="fi">
+	   <short>Seuraa suhteellisia linkkejä</short>
+	   
+	 </locale>
+
+	 <locale name="fr">
+	   <short>Suivre les liens relatifs</short>
+	   
+	 </locale>
+
+	 <locale name="hu">
+	   <short>Relatív hivatkozások követése</short>
+	   
+	 </locale>
+
+	 <locale name="it">
+	   <short>Segui solo i collegamenti relativi</short>
+	   
+	 </locale>
+
+	 <locale name="lt">
+	   <short>Sekti susijusiomis nuorodomis</short>
+	   
+	 </locale>
+
+	 <locale name="ne">
+	   <short>सम्बन्धित लिङ्कहरू अनुशरण गर्नुहोस्</short>
+	   
+	 </locale>
+
+	 <locale name="nl">
+	   <short>Relatieve links volgen</short>
+	   
+	 </locale>
+
+	 <locale name="pl">
+	   <short>Podążanie za relatywnymi odnośnikami</short>
+	   
+	 </locale>
+
+	 <locale name="pt_BR">
+	   <short>Seguir links relativos</short>
+	   
+	 </locale>
+
+	 <locale name="sk">
+	   <short>Nasledovať relatívne odkazy</short>
+	   
+	 </locale>
+
+	 <locale name="sq">
+	   <short>Ndiq lidhjet relative</short>
+	   
+	 </locale>
+
+	 <locale name="sv">
+	   <short>Följ relativa länkar</short>
+	   
+	 </locale>
+
+	 <locale name="uk">
+	   <short>Переходити за відносними посиланнями</short>
+	   
+	 </locale>
+
+	 <locale name="vi">
+	   <short>Theo các liên kết tương đối</short>
+	   
+	 </locale>
+
+	 <locale name="zh_CN">
+	   <short>跟随相对链接</short>
+	   
+	 </locale>
+
+	 <locale name="zh_HK">
+	   <short>跟隨相對連結</short>
+	   
+	 </locale>
+
+	 <locale name="zh_TW">
+	   <short>跟隨相對連結</short>
+	   
+	 </locale>
+	</schema>
+	  
+ 	<schema>
+	 <key>/schemas/apps/gwget2/limit_speed</key>
+	 <applyto>/apps/gwget2/limit_speed</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>false</default>
+	 <locale name="C">
+	   <short>Limit maximum speed</short>
+	   <long></long>
+	 </locale>
+
+	 <locale name="ar">
+	   <short>أعلى حد لسرعة</short>
+	   
+	 </locale>
+
+	 <locale name="bg">
+	   <short>Ограничаване на максималната скорост</short>
+	   
+	 </locale>
+
+	 <locale name="ca">
+	   <short>Limita la velocitat màxima</short>
+	   
+	 </locale>
+
+	 <locale name="cs">
+	   <short>Omezit maximální rychlost</short>
+	   
+	 </locale>
+
+	 <locale name="da">
+	   <short>Begræns maksimum hastighed</short>
+	   
+	 </locale>
+
+	 <locale name="de">
+	   <short>Download-Geschwindigkeit begrenzen</short>
+	   
+	 </locale>
+
+	 <locale name="el">
+	   <short>Περιορισμός μέγιστης ταχύτητας</short>
+	   
+	 </locale>
+
+	 <locale name="en_CA">
+	   <short>Limit maximum speed</short>
+	   
+	 </locale>
+
+	 <locale name="en_GB">
+	   <short>Limit maximum speed</short>
+	   
+	 </locale>
+
+	 <locale name="es">
+	   <short>Limitar la velocidad máxima</short>
+	   
+	 </locale>
+
+	 <locale name="eu">
+	   <short>Mugatu gehiengo deskarga-abiadura</short>
+	   
+	 </locale>
+
+	 <locale name="fi">
+	   <short>Rajoita noutojen siirtonopeutta</short>
+	   
+	 </locale>
+
+	 <locale name="fr">
+	   <short>Vitesse maximale</short>
+	   
+	 </locale>
+
+	 <locale name="hu">
+	   <short>Legnagyobb sebesség korlátozása</short>
+	   
+	 </locale>
+
+	 <locale name="it">
+	   <short>Limitare la velocità mazzima</short>
+	   
+	 </locale>
+
+	 <locale name="lt">
+	   <short>Riboti maksimalų greitį</short>
+	   
+	 </locale>
+
+	 <locale name="ne">
+	   <short>अधिकतम गति सिमित गर्नुहोस्</short>
+	   
+	 </locale>
+
+	 <locale name="nl">
+	   <short>Maximale snelheid beperken</short>
+	   
+	 </locale>
+
+	 <locale name="pl">
+	   <short>Ograniczenie maksymalnej szybkości</short>
+	   
+	 </locale>
+
+	 <locale name="pt_BR">
+	   <short>Limitar velocidade máxima</short>
+	   
+	 </locale>
+
+	 <locale name="sk">
+	   <short>Obmedziť najvyššiu rýchlosť</short>
+	   
+	 </locale>
+
+	 <locale name="sq">
+	   <short>Kufizo shpejtësinë maksimale</short>
+	   
+	 </locale>
+
+	 <locale name="sv">
+	   <short>Begränsa maximal hastighet</short>
+	   
+	 </locale>
+
+	 <locale name="uk">
+	   <short>Обмежувати максимальну швидкість</short>
+	   
+	 </locale>
+
+	 <locale name="vi">
+	   <short>Giới hạn tốc độ tối đa</short>
+	   
+	 </locale>
+
+	 <locale name="zh_CN">
+	   <short>限制最快速度</short>
+	   
+	 </locale>
+
+	 <locale name="zh_HK">
+	   <short>速度上限</short>
+	   
+	 </locale>
+
+	 <locale name="zh_TW">
+	   <short>速度上限</short>
+	   
+	 </locale>
+	</schema>
+
+ 	<schema>
+	 <key>/schemas/apps/gwget2/limit_simultaneousdownloads</key>
+	 <applyto>/apps/gwget2/limit_simultaneousdownloads</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>false</default>
+	 <locale name="C">
+	   <short>Limit number of simultaneous downloads</short>
+	   <long></long>
+	 </locale>
+
+	 <locale name="ar">
+	   <short>Limit number of simultaneous downloads</short>
+	   
+	 </locale>
+
+	 <locale name="bg">
+	   <short>Ограничаване броя на едновременните изтегляния</short>
+	   
+	 </locale>
+
+	 <locale name="ca">
+	   <short>Limita el nombre de descàrregues simultànies</short>
+	   
+	 </locale>
+
+	 <locale name="cs">
+	   <short>Omezit počet současných stahování</short>
+	   
+	 </locale>
+
+	 <locale name="de">
+	   <short>Anzahl gleichzeitiger Downloads begrenzen</short>
+	   
+	 </locale>
+
+	 <locale name="el">
+	   <short>Περιορισμός αριθμού ταυτόχρονων λήψεων αρχείων</short>
+	   
+	 </locale>
+
+	 <locale name="en_CA">
+	   <short>Limit number of simultaneous downloads</short>
+	   
+	 </locale>
+
+	 <locale name="en_GB">
+	   <short>Limit number of simultaneous downloads</short>
+	   
+	 </locale>
+
+	 <locale name="es">
+	   <short>Limitar el número de descargas simultáneas</short>
+	   
+	 </locale>
+
+	 <locale name="eu">
+	   <short>Mugatu uneko deskarga kopurua</short>
+	   
+	 </locale>
+
+	 <locale name="fi">
+	   <short>Rajoita rinnakkaisia noutoja</short>
+	   
+	 </locale>
+
+	 <locale name="fr">
+	   <short>Limiter le nombre de téléchargements simultanés</short>
+	   
+	 </locale>
+
+	 <locale name="hu">
+	   <short>Egyidejű letöltések korlátozása</short>
+	   
+	 </locale>
+
+	 <locale name="it">
+	   <short>Limitare il numero di scaricamenti contemporanei</short>
+	   
+	 </locale>
+
+	 <locale name="ne">
+	   <short>समकालिन डाउनलोडहरूको सङ्ख्या सिमित गर्नुहोस्</short>
+	   
+	 </locale>
+
+	 <locale name="nl">
+	   <short>Aantal gelijktijdige downloads beperken</short>
+	   
+	 </locale>
+
+	 <locale name="pl">
+	   <short>Limit jednoczesnych pobrań</short>
+	   
+	 </locale>
+
+	 <locale name="sk">
+	   <short>Obmedziť počet simultánnych sťahovaní</short>
+	   
+	 </locale>
+
+	 <locale name="sv">
+	   <short>Begränsa antalet samtidiga hämtningar</short>
+	   
+	 </locale>
+
+	 <locale name="uk">
+	   <short>Обмежувати кількість одночасних завантажень</short>
+	   
+	 </locale>
+
+	 <locale name="vi">
+	   <short>Giới hạn số việc tải về đồng thời</short>
+	   
+	 </locale>
+
+	 <locale name="zh_CN">
+	   <short>限制同时进行的下载任务数</short>
+	   
+	 </locale>
+
+	 <locale name="zh_HK">
+	   <short>限制同時下載數目</short>
+	   
+	 </locale>
+
+	 <locale name="zh_TW">
+	   <short>限制同時下載數目</short>
+	   
+	 </locale>
+	</schema>
+	  
+ 	<schema>
+	 <key>/schemas/apps/gwget2/max_depth</key>
+	 <applyto>/apps/gwget2/max_depth</applyto>
+	 <owner>gwget</owner>
+	 <type>int</type>
+	 <default>0</default>
+	 <locale name="C">
+	   <short>Maximum depth in recursive mode</short>
+	   <long></long>
+	 </locale>
+
+	 <locale name="ar">
+	   <short>Maximum depth in recursive mode</short>
+	   
+	 </locale>
+
+	 <locale name="bg">
+	   <short>Максимално ниво на дълбочина в рекурсивния режим</short>
+	   
+	 </locale>
+
+	 <locale name="ca">
+	   <short>Profunditat màxima en mode recursiu</short>
+	   
+	 </locale>
+
+	 <locale name="cs">
+	   <short>Maximální hloubka v rekurzivním režimu</short>
+	   
+	 </locale>
+
+	 <locale name="da">
+	   <short>Maksimum dybde i rekursiv tilstand</short>
+	   
+	 </locale>
+
+	 <locale name="de">
+	   <short>Maximale Tiefe im rekursiven Modus</short>
+	   
+	 </locale>
+
+	 <locale name="el">
+	   <short>Μέγιστο επίπεδο βάθους σε recursive mode</short>
+	   
+	 </locale>
+
+	 <locale name="en_CA">
+	   <short>Maximum depth in recursive mode</short>
+	   
+	 </locale>
+
+	 <locale name="en_GB">
+	   <short>Maximum depth in recursive mode</short>
+	   
+	 </locale>
+
+	 <locale name="es">
+	   <short>Nivel de profundidad máximo en modo recursivo</short>
+	   
+	 </locale>
+
+	 <locale name="eu">
+	   <short>Sakonera maila handiena modu errekurtsiboan</short>
+	   
+	 </locale>
+
+	 <locale name="fi">
+	   <short>Suurin syvyys rekursiivisessa tilassa</short>
+	   
+	 </locale>
+
+	 <locale name="fr">
+	   <short>Niveau maximum de profondeur en mode récursif</short>
+	   
+	 </locale>
+
+	 <locale name="hu">
+	   <short>Legnagyobb mélység rekurzív módban</short>
+	   
+	 </locale>
+
+	 <locale name="it">
+	   <short>Massimo livello di profondità in modalità ricorsiva:  </short>
+	   
+	 </locale>
+
+	 <locale name="lt">
+	   <short>Maksimalus gylis rekursinėje veiksenoje</short>
+	   
+	 </locale>
+
+	 <locale name="ne">
+	   <short>पुनरावृत्तिक मोडमा अधिकतम गहिराइ</short>
+	   
+	 </locale>
+
+	 <locale name="nl">
+	   <short>Maximale diepte in recursieve modus</short>
+	   
+	 </locale>
+
+	 <locale name="pl">
+	   <short>Maksymalna głębokość w trybie rekursywnym</short>
+	   
+	 </locale>
+
+	 <locale name="pt_BR">
+	   <short>Profundidade máxima em modo recursivo</short>
+	   
+	 </locale>
+
+	 <locale name="sk">
+	   <short>Maximálna hĺbka v rekurzívnom režime</short>
+	   
+	 </locale>
+
+	 <locale name="sq">
+	   <short>Thellësia maksimale në mënyrën ripërsëritëse</short>
+	   
+	 </locale>
+
+	 <locale name="sv">
+	   <short>Maximalt djup i rekursivt läge</short>
+	   
+	 </locale>
+
+	 <locale name="uk">
+	   <short>Максимальна глибина у рекурсивному режимі</short>
+	   
+	 </locale>
+
+	 <locale name="vi">
+	   <short>Độ sâu tối đa trong chế độ đệ qui</short>
+	   
+	 </locale>
+
+	 <locale name="zh_CN">
+	   <short>递归模式中的最大深度</short>
+	   
+	 </locale>
+
+	 <locale name="zh_HK">
+	   <short>遞迴模式的目錄深度上限：</short>
+	   
+	 </locale>
+
+	 <locale name="zh_TW">
+	   <short>遞迴模式的目錄深度上限：</short>
+	   
+	 </locale>
+	</schema>
+	 
+ 	<schema>
+	 <key>/schemas/apps/gwget2/max_speed</key>
+	 <applyto>/apps/gwget2/max_speed</applyto>
+	 <owner>gwget</owner>
+	 <type>int</type>
+	 <default>0</default>
+	 <locale name="C">
+	   <short>Maximum speed limit</short>
+	   <long></long>
+	 </locale>
+
+	 <locale name="ar">
+	   <short>أعلى سرعة محددة</short>
+	   
+	 </locale>
+
+	 <locale name="bg">
+	   <short>Ограничаване на максималната скорост</short>
+	   
+	 </locale>
+
+	 <locale name="ca">
+	   <short>Límit de velocitat màxima</short>
+	   
+	 </locale>
+
+	 <locale name="cs">
+	   <short>Maximální limit rychlosti</short>
+	   
+	 </locale>
+
+	 <locale name="da">
+	   <short>Maksimum hastighedsgrænse</short>
+	   
+	 </locale>
+
+	 <locale name="de">
+	   <short>Maximale Download-Geschwindigkeit</short>
+	   
+	 </locale>
+
+	 <locale name="el">
+	   <short>Μέγιστο όριο ταχύτητας</short>
+	   
+	 </locale>
+
+	 <locale name="en_CA">
+	   <short>Maximum speed limit</short>
+	   
+	 </locale>
+
+	 <locale name="en_GB">
+	   <short>Maximum speed limit</short>
+	   
+	 </locale>
+
+	 <locale name="es">
+	   <short>Límite máximo de velocidad</short>
+	   
+	 </locale>
+
+	 <locale name="eu">
+	   <short>Gehiengo deskarga-abiadura</short>
+	   
+	 </locale>
+
+	 <locale name="fi">
+	   <short>Suurin latausnopeus</short>
+	   
+	 </locale>
+
+	 <locale name="fr">
+	   <short>Vitesse maximale</short>
+	   
+	 </locale>
+
+	 <locale name="hu">
+	   <short>Legnagyobb sebesség</short>
+	   
+	 </locale>
+
+	 <locale name="it">
+	   <short>Limite massimo di velocità:  </short>
+	   
+	 </locale>
+
+	 <locale name="lt">
+	   <short>Maksimalaus dydžio limitas</short>
+	   
+	 </locale>
+
+	 <locale name="ne">
+	   <short>अधिकतम गति सीमा</short>
+	   
+	 </locale>
+
+	 <locale name="nl">
+	   <short>Maximale snelheid</short>
+	   
+	 </locale>
+
+	 <locale name="pl">
+	   <short>Maksymalna szybkość pobierania</short>
+	   
+	 </locale>
+
+	 <locale name="pt_BR">
+	   <short>Limite máximo de velocidade</short>
+	   
+	 </locale>
+
+	 <locale name="sk">
+	   <short>Obmedzenie najvyššej rýchlosti</short>
+	   
+	 </locale>
+
+	 <locale name="sq">
+	   <short>Kufiri i shpejtësisë maksimale</short>
+	   
+	 </locale>
+
+	 <locale name="sv">
+	   <short>Maximal hastighetsgräns</short>
+	   
+	 </locale>
+
+	 <locale name="uk">
+	   <short>Максимальна швидкість</short>
+	   
+	 </locale>
+
+	 <locale name="vi">
+	   <short>Giới hạn của tốc độ tối đa</short>
+	   
+	 </locale>
+
+	 <locale name="zh_CN">
+	   <short>最快速度</short>
+	   
+	 </locale>
+
+	 <locale name="zh_HK">
+	   <short>速度上限</short>
+	   
+	 </locale>
+
+	 <locale name="zh_TW">
+	   <short>速度上限</short>
+	   
+	 </locale>
+	</schema>
+
+ 	<schema>
+	 <key>/schemas/apps/gwget2/max_simultaneousdownloads</key>
+	 <applyto>/apps/gwget2/max_simultaneousdownloads</applyto>
+	 <owner>gwget</owner>
+	 <type>int</type>
+	 <default>0</default>
+	 <locale name="C">
+	   <short>Maximum number of simultaneous downloads</short>
+	   <long></long>
+	 </locale>
+
+	 <locale name="ar">
+	   <short>Maximum number of simultaneous downloads</short>
+	   
+	 </locale>
+
+	 <locale name="bg">
+	   <short>Максимален брой едновременни изтегляния</short>
+	   
+	 </locale>
+
+	 <locale name="ca">
+	   <short>Nombre màxim de descàrregues simultànies</short>
+	   
+	 </locale>
+
+	 <locale name="cs">
+	   <short>Maximální počet současných stahování</short>
+	   
+	 </locale>
+
+	 <locale name="de">
+	   <short>Maximale Anzahl von gleichzeitigen Downloads</short>
+	   
+	 </locale>
+
+	 <locale name="el">
+	   <short>Μέγιστος αριθμός ταυτόχρονων λήψεων αρχείων</short>
+	   
+	 </locale>
+
+	 <locale name="en_CA">
+	   <short>Maximum number of simultaneous downloads</short>
+	   
+	 </locale>
+
+	 <locale name="en_GB">
+	   <short>Maximum number of simultaneous downloads</short>
+	   
+	 </locale>
+
+	 <locale name="es">
+	   <short>Número máximo de descargas simultáneas</short>
+	   
+	 </locale>
+
+	 <locale name="eu">
+	   <short>Gehienezko uneko deskarga kopurua</short>
+	   
+	 </locale>
+
+	 <locale name="fi">
+	   <short>Suurin määrä samanaikaisia noutoja</short>
+	   
+	 </locale>
+
+	 <locale name="fr">
+	   <short>Nombre maximum de téléchargements simultanés</short>
+	   
+	 </locale>
+
+	 <locale name="hu">
+	   <short>Párhuzamos letöltések legnagyobb száma</short>
+	   
+	 </locale>
+
+	 <locale name="it">
+	   <short>Numero massimo di scaricamenti contemporanei</short>
+	   
+	 </locale>
+
+	 <locale name="ne">
+	   <short>समकालिन डाउनलोडहरूको अधिकतम सङ्ख्या</short>
+	   
+	 </locale>
+
+	 <locale name="nl">
+	   <short>Maximum aantal gelijktijdige downloads</short>
+	   
+	 </locale>
+
+	 <locale name="pl">
+	   <short>Maksymalna ilość jednoczesnych pobrań</short>
+	   
+	 </locale>
+
+	 <locale name="sk">
+	   <short>Maximálny počet simultánnych sťahovaní</short>
+	   
+	 </locale>
+
+	 <locale name="sv">
+	   <short>Maximalt antal samtidiga hämtningar</short>
+	   
+	 </locale>
+
+	 <locale name="uk">
+	   <short>Максимальна сумарна швидкість завантажень</short>
+	   
+	 </locale>
+
+	 <locale name="vi">
+	   <short>Số việc tải về đồng thời tối đa</short>
+	   
+	 </locale>
+
+	 <locale name="zh_CN">
+	   <short>同时进行的最多任务数</short>
+	   
+	 </locale>
+
+	 <locale name="zh_HK">
+	   <short>最大同時下載數目</short>
+	   
+	 </locale>
+
+	 <locale name="zh_TW">
+	   <short>最大同時下載數目</short>
+	   
+	 </locale>
+	</schema>
+
+	<schema>
+	 <key>/schemas/apps/gwget2/n_downloads</key>
+	 <applyto>/apps/gwget2/n_downloads</applyto>
+	 <owner>gwget</owner>
+	 <type>int</type>
+	 <default>0</default>
+	 <locale name="C">
+	   <short>Number of downloads</short>
+	   <long></long>
+	 </locale>
+
+	 <locale name="ar">
+	   <short>عدد ملفات التنزيل</short>
+	   
+	 </locale>
+
+	 <locale name="bg">
+	   <short>Брой изтегляния</short>
+	   
+	 </locale>
+
+	 <locale name="ca">
+	   <short>Nombre de descàrregues</short>
+	   
+	 </locale>
+
+	 <locale name="cs">
+	   <short>Počet stahování</short>
+	   
+	 </locale>
+
+	 <locale name="da">
+	   <short>Antal overførsler</short>
+	   
+	 </locale>
+
+	 <locale name="de">
+	   <short>Anzahl von Downloads</short>
+	   
+	 </locale>
+
+	 <locale name="el">
+	   <short>Αριθμός λήψεων αρχείων</short>
+	   
+	 </locale>
+
+	 <locale name="en_CA">
+	   <short>Number of downloads</short>
+	   
+	 </locale>
+
+	 <locale name="en_GB">
+	   <short>Number of downloads</short>
+	   
+	 </locale>
+
+	 <locale name="es">
+	   <short>Número de descargas</short>
+	   
+	 </locale>
+
+	 <locale name="eu">
+	   <short>Deskarga kopurua</short>
+	   
+	 </locale>
+
+	 <locale name="fi">
+	   <short>Siirtojen lukumäärä</short>
+	   
+	 </locale>
+
+	 <locale name="fr">
+	   <short>Nombre de téléchargements</short>
+	   
+	 </locale>
+
+	 <locale name="hu">
+	   <short>Letöltések száma</short>
+	   
+	 </locale>
+
+	 <locale name="it">
+	   <short>Numero di scaricamenti</short>
+	   
+	 </locale>
+
+	 <locale name="lt">
+	   <short>Atsisiuntimų kiekis</short>
+	   
+	 </locale>
+
+	 <locale name="ne">
+	   <short>डाउनलोडहरूको सङ्ख्या</short>
+	   
+	 </locale>
+
+	 <locale name="nl">
+	   <short>Aantal downloads</short>
+	   
+	 </locale>
+
+	 <locale name="pl">
+	   <short>Ilość pobierań</short>
+	   
+	 </locale>
+
+	 <locale name="pt_BR">
+	   <short>Número de downloads</short>
+	   
+	 </locale>
+
+	 <locale name="sk">
+	   <short>Počet sťahovaní</short>
+	   
+	 </locale>
+
+	 <locale name="sq">
+	   <short>Numri i shkarkimeve</short>
+	   
+	 </locale>
+
+	 <locale name="sv">
+	   <short>Antal hämtningar</short>
+	   
+	 </locale>
+
+	 <locale name="uk">
+	   <short>Кількість завантажень</short>
+	   
+	 </locale>
+
+	 <locale name="vi">
+	   <short>Số việc tải về</short>
+	   
+	 </locale>
+
+	 <locale name="zh_CN">
+	   <short>下载任务数</short>
+	   
+	 </locale>
+
+	 <locale name="zh_HK">
+	   <short>下載數目</short>
+	   
+	 </locale>
+
+	 <locale name="zh_TW">
+	   <short>下載數目</short>
+	   
+	 </locale>
+	</schema>
+	 
+	<schema>
+	 <key>/schemas/apps/gwget2/no_create_directories</key>
+	 <applyto>/apps/gwget2/no_create_directories</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>false</default>
+	 <locale name="C">
+	   <short></short>
+	   <long></long>
+	 </locale>
+	</schema>
+		 
+	<schema>
+	 <key>/schemas/apps/gwget2/num_retrys</key>
+	 <applyto>/apps/gwget2/num_retrys</applyto>
+	 <owner>gwget</owner>
+	 <type>int</type>
+	 <default>3</default>
+	 <locale name="C">
+	   <short>Number of retries</short>
+	   <long></long>
+	 </locale>
+
+	 <locale name="ar">
+	   <short>عدد محاولات التنزيل</short>
+	   
+	 </locale>
+
+	 <locale name="bg">
+	   <short>Брой на повторните опитвания</short>
+	   
+	 </locale>
+
+	 <locale name="ca">
+	   <short>Nombre d&apos;intents</short>
+	   
+	 </locale>
+
+	 <locale name="cs">
+	   <short>Počet pokusů</short>
+	   
+	 </locale>
+
+	 <locale name="da">
+	   <short>Antal forsøg</short>
+	   
+	 </locale>
+
+	 <locale name="de">
+	   <short>Anzahl von Wiederholungsversuchen</short>
+	   
+	 </locale>
+
+	 <locale name="el">
+	   <short>Αριθμός επανάληψης προσπαθειών</short>
+	   
+	 </locale>
+
+	 <locale name="en_CA">
+	   <short>Number of retries</short>
+	   
+	 </locale>
+
+	 <locale name="en_GB">
+	   <short>Number of retries</short>
+	   
+	 </locale>
+
+	 <locale name="es">
+	   <short>Número de reintentos</short>
+	   
+	 </locale>
+
+	 <locale name="eu">
+	   <short>Saiakera kopurua</short>
+	   
+	 </locale>
+
+	 <locale name="fi">
+	   <short>Uusintayritysten lukumäärä</short>
+	   
+	 </locale>
+
+	 <locale name="fr">
+	   <short>Nombre d&apos;essais</short>
+	   
+	 </locale>
+
+	 <locale name="hu">
+	   <short>Újrapróbálkozások száma</short>
+	   
+	 </locale>
+
+	 <locale name="it">
+	   <short>Numero di tentativi:</short>
+	   
+	 </locale>
+
+	 <locale name="lt">
+	   <short>Pakartotinių bandymų skaičius</short>
+	   
+	 </locale>
+
+	 <locale name="ne">
+	   <short>पुन: प्रयास गरिएको सङ्ख्या</short>
+	   
+	 </locale>
+
+	 <locale name="nl">
+	   <short>Aantal pogingen</short>
+	   
+	 </locale>
+
+	 <locale name="pl">
+	   <short>Ilość powtórzeń</short>
+	   
+	 </locale>
+
+	 <locale name="pt_BR">
+	   <short>Número de novas tentativas</short>
+	   
+	 </locale>
+
+	 <locale name="sk">
+	   <short>Počet opakovaní</short>
+	   
+	 </locale>
+
+	 <locale name="sq">
+	   <short>Numri i përsëritjeve</short>
+	   
+	 </locale>
+
+	 <locale name="sv">
+	   <short>Antal återförsök</short>
+	   
+	 </locale>
+
+	 <locale name="uk">
+	   <short>Кількість спроб</short>
+	   
+	 </locale>
+
+	 <locale name="vi">
+	   <short>Số lần thử lại</short>
+	   
+	 </locale>
+
+	 <locale name="zh_CN">
+	   <short>重试次数</short>
+	   
+	 </locale>
+
+	 <locale name="zh_HK">
+	   <short>重試次數</short>
+	   
+	 </locale>
+
+	 <locale name="zh_TW">
+	   <short>重試次數</short>
+	   
+	 </locale>
+	</schema>
+	 
+	<schema>
+	 <key>/schemas/apps/gwget2/position_x</key>
+	 <applyto>/apps/gwget2/position_x</applyto>
+	 <owner>gwget</owner>
+	 <type>int</type>
+	 <default>0</default>
+	 <locale name="C">
+	   <short></short>
+	   <long></long>
+	 </locale>
+	</schema>
+
+	<schema>
+	 <key>/schemas/apps/gwget2/position_y</key>
+	 <applyto>/apps/gwget2/position_y</applyto>
+	 <owner>gwget</owner>
+	 <type>int</type>
+	 <default>0</default>
+	 <locale name="C">
+	   <short></short>
+	   <long></long>
+	 </locale>
+	</schema>
+	
+	<schema>
+	 <key>/schemas/apps/gwget2/resume_at_start</key>
+	 <applyto>/apps/gwget2/resume_at_start</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>false</default>
+	 <locale name="C">
+	   <short>Resume downloads at startup</short>
+	   <long></long>
+	 </locale>
+
+	 <locale name="ar">
+	   <short>أكمل التنزيل عند تشغيل البرنامج</short>
+	   
+	 </locale>
+
+	 <locale name="bg">
+	   <short>Продължаване на изтеглянията след стартиране на програмата</short>
+	   
+	 </locale>
+
+	 <locale name="ca">
+	   <short>Reprèn les descàrregues en iniciar</short>
+	   
+	 </locale>
+
+	 <locale name="cs">
+	   <short>Pokračovat ve stahováních při spuštění</short>
+	   
+	 </locale>
+
+	 <locale name="da">
+	   <short>Genoptag overførsler ved opstart</short>
+	   
+	 </locale>
+
+	 <locale name="de">
+	   <short>Downloads nach Neustart fortsetzen</short>
+	   
+	 </locale>
+
+	 <locale name="el">
+	   <short>Συνέχιση λήψης αρχείων κατά την εκκίνηση</short>
+	   
+	 </locale>
+
+	 <locale name="en_CA">
+	   <short>Resume downloads at startup</short>
+	   
+	 </locale>
+
+	 <locale name="en_GB">
+	   <short>Resume downloads at startup</short>
+	   
+	 </locale>
+
+	 <locale name="es">
+	   <short>Continuar descargas al iniciar</short>
+	   
+	 </locale>
+
+	 <locale name="eu">
+	   <short>Jarraitu deskargatzen abiatzean</short>
+	   
+	 </locale>
+
+	 <locale name="fi">
+	   <short>Jatka noutoja käynnistettäessä</short>
+	   
+	 </locale>
+
+	 <locale name="fr">
+	   <short>Reprendre les téléchargements au démarrage</short>
+	   
+	 </locale>
+
+	 <locale name="hu">
+	   <short>Letöltések folytatása induláskor</short>
+	   
+	 </locale>
+
+	 <locale name="it">
+	   <short>Riprendere gli scaricamenti all&apos;avvio</short>
+	   
+	 </locale>
+
+	 <locale name="lt">
+	   <short>Paleidus programą pratęsti siuntimus</short>
+	   
+	 </locale>
+
+	 <locale name="ne">
+	   <short>सुरुवातमा डाउनलोडहरूलाई पुन:निरन्तरता दिनुहोस्</short>
+	   
+	 </locale>
+
+	 <locale name="nl">
+	   <short>Downloads hervatten bij opstarten</short>
+	   
+	 </locale>
+
+	 <locale name="pl">
+	   <short>Kontynuacja pobierania przy starcie</short>
+	   
+	 </locale>
+
+	 <locale name="pt_BR">
+	   <short>Continuar downloads ao iniciar</short>
+	   
+	 </locale>
+
+	 <locale name="sk">
+	   <short>Pokračovať v sťahovaní pri spustení</short>
+	   
+	 </locale>
+
+	 <locale name="sq">
+	   <short>Rifillo shkarkimin në nisjen e programit</short>
+	   
+	 </locale>
+
+	 <locale name="sv">
+	   <short>Återuppta hämtningar vid uppstart</short>
+	   
+	 </locale>
+
+	 <locale name="uk">
+	   <short>Продовжувати завантаження після запуску</short>
+	   
+	 </locale>
+
+	 <locale name="vi">
+	   <short>Tiếp tục lại tải về khi khởi chạy</short>
+	   
+	 </locale>
+
+	 <locale name="zh_CN">
+	   <short>启动时继续下载</short>
+	   
+	 </locale>
+
+	 <locale name="zh_HK">
+	   <short>程式啟動時繼續下載未完成的檔案</short>
+	   
+	 </locale>
+
+	 <locale name="zh_TW">
+	   <short>程式啟動時繼續下載未完成的檔案</short>
+	   
+	 </locale>
+	</schema>
+
+	<schema>
+	 <key>/schemas/apps/gwget2/open_after_dl</key>
+	 <applyto>/apps/gwget2/open_after_dl</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>false</default>
+	 <locale name="C">
+	   <short>Open the file after download</short>
+	   <long></long>
+	 </locale>
+
+	 <locale name="ar">
+	   <short>إفتح الملف بعد إكتمال تنزيله</short>
+	   
+	 </locale>
+
+	 <locale name="bg">
+	   <short>Отвяряне на файловете след изтеглянето им</short>
+	   
+	 </locale>
+
+	 <locale name="ca">
+	   <short>Obre el fitxer un cop descarregat</short>
+	   
+	 </locale>
+
+	 <locale name="cs">
+	   <short>Otevířít soubor po stažení</short>
+	   
+	 </locale>
+
+	 <locale name="da">
+	   <short>Åbn filen efter overførslen</short>
+	   
+	 </locale>
+
+	 <locale name="de">
+	   <short>Datei nach dem Download öffnen</short>
+	   
+	 </locale>
+
+	 <locale name="el">
+	   <short>Άνοιγμα του αρχείου μετά τη λήψη του</short>
+	   
+	 </locale>
+
+	 <locale name="en_CA">
+	   <short>Open the file after download</short>
+	   
+	 </locale>
+
+	 <locale name="en_GB">
+	   <short>Open the file after download</short>
+	   
+	 </locale>
+
+	 <locale name="es">
+	   <short>Abrir el archivo después de descargar</short>
+	   
+	 </locale>
+
+	 <locale name="eu">
+	   <short>Ireki automatikoki fitxategiak deskargatu ostean</short>
+	   
+	 </locale>
+
+	 <locale name="fi">
+	   <short>Avaa tiedosto noudon jälkeen</short>
+	   
+	 </locale>
+
+	 <locale name="fr">
+	   <short>Ouvrir le fichier après le téléchargement</short>
+	   
+	 </locale>
+
+	 <locale name="hu">
+	   <short>Fájl megnyitása letöltés után</short>
+	   
+	 </locale>
+
+	 <locale name="it">
+	   <short>Aprire automaticamente i file dopo averli scaricati</short>
+	   
+	 </locale>
+
+	 <locale name="lt">
+	   <short>Atidaryti bylą parsiuntus</short>
+	   
+	 </locale>
+
+	 <locale name="ne">
+	   <short>डाउनलोड पछि फाइल खोल्नुहोस्</short>
+	   
+	 </locale>
+
+	 <locale name="nl">
+	   <short>Bestand openen na downloaden</short>
+	   
+	 </locale>
+
+	 <locale name="pl">
+	   <short>Otwieranie pliku po pobraniu</short>
+	   
+	 </locale>
+
+	 <locale name="pt_BR">
+	   <short>Abrir o arquivo após o download</short>
+	   
+	 </locale>
+
+	 <locale name="sk">
+	   <short>Otvoriť súbor po stiahnutí</short>
+	   
+	 </locale>
+
+	 <locale name="sq">
+	   <short>Hap file pas shkarkimit</short>
+	   
+	 </locale>
+
+	 <locale name="sv">
+	   <short>Öppna filen efter hämtning</short>
+	   
+	 </locale>
+
+	 <locale name="uk">
+	   <short>Відкривати файл після завантаження</short>
+	   
+	 </locale>
+
+	 <locale name="vi">
+	   <short>Mở tập tin sau khi tải về</short>
+	   
+	 </locale>
+
+	 <locale name="zh_CN">
+	   <short>下载后打开文件</short>
+	   
+	 </locale>
+
+	 <locale name="zh_HK">
+	   <short>下載完成後開啟檔案</short>
+	   
+	 </locale>
+
+	 <locale name="zh_TW">
+	   <short>下載完成後開啟檔案</short>
+	   
+	 </locale>
+	</schema>
+
+	<schema>
+	 <key>/schemas/apps/gwget2/view_actual_size</key>
+	 <applyto>/apps/gwget2/view_actual_size</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>true</default>
+	 <locale name="C">
+	   <short></short>
+	   <long></long>
+	 </locale>
+	</schema>
+	 
+ 	<schema>
+	 <key>/schemas/apps/gwget2/view_down_speed</key>
+	 <applyto>/apps/gwget2/view_down_speed</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>true</default>
+	 <locale name="C">
+	   <short>View download speed column</short>
+	   <long></long>
+	 </locale>
+
+	 <locale name="ar">
+	   <short>أظهر عمود سرعة التنزيل</short>
+	   
+	 </locale>
+
+	 <locale name="bg">
+	   <short>Показване на колоната за скоростта на изтеглянията</short>
+	   
+	 </locale>
+
+	 <locale name="ca">
+	   <short>Mostra la columna de velocitat de descàrrega</short>
+	   
+	 </locale>
+
+	 <locale name="cs">
+	   <short>Zobrazovat sloupec rychlosti stahování</short>
+	   
+	 </locale>
+
+	 <locale name="da">
+	   <short>Vis kolonnen overførselshastighed</short>
+	   
+	 </locale>
+
+	 <locale name="de">
+	   <short>Spalte für Download-Geschwindigkeit anzeigen</short>
+	   
+	 </locale>
+
+	 <locale name="el">
+	   <short>Προβολή στήλης περιορισμού ταχύτητας λήψης αρχείων</short>
+	   
+	 </locale>
+
+	 <locale name="en_CA">
+	   <short>View download speed column</short>
+	   
+	 </locale>
+
+	 <locale name="en_GB">
+	   <short>View download speed column</short>
+	   
+	 </locale>
+
+	 <locale name="es">
+	   <short>Ver columna de velocidad de la descarga</short>
+	   
+	 </locale>
+
+	 <locale name="eu">
+	   <short>Ikusi deskarga-abiaduraren zutabea</short>
+	   
+	 </locale>
+
+	 <locale name="fi">
+	   <short>Näytä haun nopeuden sarake</short>
+	   
+	 </locale>
+
+	 <locale name="fr">
+	   <short>Afficher la colonne de la vitesse de téléchargement</short>
+	   
+	 </locale>
+
+	 <locale name="hu">
+	   <short>Letöltés sebessége oszlop mutatása</short>
+	   
+	 </locale>
+
+	 <locale name="it">
+	   <short>Visualizzare la colonna della velocità di scaricamento</short>
+	   
+	 </locale>
+
+	 <locale name="lt">
+	   <short>Rodyti parsiuntimo greičio stulpelį</short>
+	   
+	 </locale>
+
+	 <locale name="ne">
+	   <short>डाउनलोड गति स्तम्भ हेर्नुहोस्</short>
+	   
+	 </locale>
+
+	 <locale name="nl">
+	   <short>Kolom downloadsnelheid tonen</short>
+	   
+	 </locale>
+
+	 <locale name="pl">
+	   <short>Widok kolumny z szybkością pobierania</short>
+	   
+	 </locale>
+
+	 <locale name="pt_BR">
+	   <short>Exibir a coluna de velocidade do download</short>
+	   
+	 </locale>
+
+	 <locale name="sk">
+	   <short>Zobraziť stĺpec s rýchlosťou sťahovania</short>
+	   
+	 </locale>
+
+	 <locale name="sq">
+	   <short>Shfaq kolonën e shpejtësisë së shkarkimit</short>
+	   
+	 </locale>
+
+	 <locale name="sv">
+	   <short>Visa kolumnen hämtningshastighet</short>
+	   
+	 </locale>
+
+	 <locale name="uk">
+	   <short>Показувати стовпчик швидкості завантаження</short>
+	   
+	 </locale>
+
+	 <locale name="vi">
+	   <short>Xem cột tốc độ tải về</short>
+	   
+	 </locale>
+
+	 <locale name="zh_CN">
+	   <short>查看速度限制列</short>
+	   
+	 </locale>
+
+	 <locale name="zh_HK">
+	   <short>顯示下載速度欄位</short>
+	   
+	 </locale>
+
+	 <locale name="zh_TW">
+	   <short>顯示下載速度欄位</short>
+	   
+	 </locale>
+	</schema>
+	
+	<schema>
+	 <key>/schemas/apps/gwget2/view_elapse_time</key>
+	 <applyto>/apps/gwget2/view_elapse_time</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>false</default>
+	 <locale name="C">
+	   <short>View elapsed time column</short>
+	   <long></long>
+	 </locale>
+
+	 <locale name="ar">
+	   <short>أظهر عمود الزمن التنزيل</short>
+	   
+	 </locale>
+
+	 <locale name="bg">
+	   <short>Показване на колоната за изминалото време</short>
+	   
+	 </locale>
+
+	 <locale name="ca">
+	   <short>Mostra la columna del temps transcorregut</short>
+	   
+	 </locale>
+
+	 <locale name="cs">
+	   <short>Zobrazovat sloupec uplynulého času</short>
+	   
+	 </locale>
+
+	 <locale name="da">
+	   <short>Vis kolonnen forløbet tid</short>
+	   
+	 </locale>
+
+	 <locale name="de">
+	   <short>Spalte für abgelaufene Zeit anzeigen</short>
+	   
+	 </locale>
+
+	 <locale name="el">
+	   <short>Προβολή στήλης χρόνου που πέρασε</short>
+	   
+	 </locale>
+
+	 <locale name="en_CA">
+	   <short>View elapsed time column</short>
+	   
+	 </locale>
+
+	 <locale name="en_GB">
+	   <short>View elapsed time column</short>
+	   
+	 </locale>
+
+	 <locale name="es">
+	   <short>Ver columna del tiempo transcurrido</short>
+	   
+	 </locale>
+
+	 <locale name="eu">
+	   <short>Ikusi igarotako denboraren zutabea</short>
+	   
+	 </locale>
+
+	 <locale name="fi">
+	   <short>Näytä käytetyn ajan sarake</short>
+	   
+	 </locale>
+
+	 <locale name="fr">
+	   <short>Afficher la colonne de temps écoulé</short>
+	   
+	 </locale>
+
+	 <locale name="hu">
+	   <short>Eltelt idő oszlop mutatása</short>
+	   
+	 </locale>
+
+	 <locale name="it">
+	   <short>Visualizzare la colonna del tempo trascorso</short>
+	   
+	 </locale>
+
+	 <locale name="lt">
+	   <short>Rodyti praėjusio laiko stulpelį</short>
+	   
+	 </locale>
+
+	 <locale name="ne">
+	   <short>व्यतित समय स्तम्भ हेर्नुहोस्</short>
+	   
+	 </locale>
+
+	 <locale name="nl">
+	   <short>Kolom verlopen tijd tonen</short>
+	   
+	 </locale>
+
+	 <locale name="pl">
+	   <short>Widok kolumny z upłyniętym czasem</short>
+	   
+	 </locale>
+
+	 <locale name="pt_BR">
+	   <short>Exibir a coluna de tempo decorrido</short>
+	   
+	 </locale>
+
+	 <locale name="sk">
+	   <short>Zobraziť stĺpec s uplynulým časom</short>
+	   
+	 </locale>
+
+	 <locale name="sq">
+	   <short>Shfaq kolonën e kohës që kaloi</short>
+	   
+	 </locale>
+
+	 <locale name="sv">
+	   <short>Visa kolumnen förfluten tid</short>
+	   
+	 </locale>
+
+	 <locale name="uk">
+	   <short>Показувати стовпчик часу, що минув</short>
+	   
+	 </locale>
+
+	 <locale name="vi">
+	   <short>Xem cột thời gian đã qua</short>
+	   
+	 </locale>
+
+	 <locale name="zh_CN">
+	   <short>查看剩余时间列</short>
+	   
+	 </locale>
+
+	 <locale name="zh_HK">
+	   <short>顯示已下載時間欄位</short>
+	   
+	 </locale>
+
+	 <locale name="zh_TW">
+	   <short>顯示已下載時間欄位</short>
+	   
+	 </locale>
+	</schema>
+	
+ 	<schema>
+	 <key>/schemas/apps/gwget2/view_percentage</key>
+	 <applyto>/apps/gwget2/view_percentage</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>true</default>
+	 <locale name="C">
+	   <short>View percentage column</short>
+	   <long></long>
+	 </locale>
+
+	 <locale name="ar">
+	   <short>أظهر عمود النسبة</short>
+	   
+	 </locale>
+
+	 <locale name="bg">
+	   <short>Показване на колоната за процентите</short>
+	   
+	 </locale>
+
+	 <locale name="ca">
+	   <short>Mostra la columna de percentatge</short>
+	   
+	 </locale>
+
+	 <locale name="cs">
+	   <short>Zobrazovat sloupec procent</short>
+	   
+	 </locale>
+
+	 <locale name="da">
+	   <short>Vis kolonnen procentandel</short>
+	   
+	 </locale>
+
+	 <locale name="de">
+	   <short>Spalte für prozentuale Darstellung anzeigen</short>
+	   
+	 </locale>
+
+	 <locale name="el">
+	   <short>Προβολή στήλης ποσοστού</short>
+	   
+	 </locale>
+
+	 <locale name="en_CA">
+	   <short>View percentage column</short>
+	   
+	 </locale>
+
+	 <locale name="en_GB">
+	   <short>View percentage column</short>
+	   
+	 </locale>
+
+	 <locale name="es">
+	   <short>Ver columna de porcentaje</short>
+	   
+	 </locale>
+
+	 <locale name="eu">
+	   <short>Ikusi ehunekoaren zutabea</short>
+	   
+	 </locale>
+
+	 <locale name="fi">
+	   <short>Näytä prosenttiosuuden sarake</short>
+	   
+	 </locale>
+
+	 <locale name="fr">
+	   <short>Afficher la colonne de pourcentage</short>
+	   
+	 </locale>
+
+	 <locale name="hu">
+	   <short>Százalék oszlop mutatása</short>
+	   
+	 </locale>
+
+	 <locale name="it">
+	   <short>Visualizzare la colonna della percentuale</short>
+	   
+	 </locale>
+
+	 <locale name="lt">
+	   <short>Rodyti procentų stulpelį</short>
+	   
+	 </locale>
+
+	 <locale name="ne">
+	   <short>प्रतिशत स्तम्भ हेर्नुहोस्</short>
+	   
+	 </locale>
+
+	 <locale name="nl">
+	   <short>Kolom percentage tonen</short>
+	   
+	 </locale>
+
+	 <locale name="pl">
+	   <short>Widok kolumny procentów</short>
+	   
+	 </locale>
+
+	 <locale name="pt_BR">
+	   <short>Exibir a coluna de porcentagem</short>
+	   
+	 </locale>
+
+	 <locale name="sk">
+	   <short>Zobraziť stĺpec s percentami</short>
+	   
+	 </locale>
+
+	 <locale name="sq">
+	   <short>Shfaq kolonën e përqindjes</short>
+	   
+	 </locale>
+
+	 <locale name="sv">
+	   <short>Visa kolumnen procentandel</short>
+	   
+	 </locale>
+
+	 <locale name="uk">
+	   <short>Показувати стовпчик відсотку</short>
+	   
+	 </locale>
+
+	 <locale name="vi">
+	   <short>Xem cột phần trăm</short>
+	   
+	 </locale>
+
+	 <locale name="zh_CN">
+	   <short>查看百分比列</short>
+	   
+	 </locale>
+
+	 <locale name="zh_HK">
+	   <short>顯示百分比欄位</short>
+	   
+	 </locale>
+
+	 <locale name="zh_TW">
+	   <short>顯示百分比欄位</short>
+	   
+	 </locale>
+	</schema>
+	
+ 	<schema>
+	 <key>/schemas/apps/gwget2/view_rem_time</key>
+	 <applyto>/apps/gwget2/view_rem_time</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>true</default>
+	 <locale name="C">
+	   <short>View remaining time column</short>
+	   <long></long>
+	 </locale>
+
+	 <locale name="ar">
+	   <short>إظهار عمود الوقت المتبقي</short>
+	   
+	 </locale>
+
+	 <locale name="bg">
+	   <short>Показване на колоната за оставащото време</short>
+	   
+	 </locale>
+
+	 <locale name="ca">
+	   <short>Mostra la columna del temps restant</short>
+	   
+	 </locale>
+
+	 <locale name="cs">
+	   <short>Zobrazovat sloupec zbývajícího času</short>
+	   
+	 </locale>
+
+	 <locale name="da">
+	   <short>Vis kolonnen tilbageværende tid</short>
+	   
+	 </locale>
+
+	 <locale name="de">
+	   <short>Spalte für verbleibende Zeit anzeigen</short>
+	   
+	 </locale>
+
+	 <locale name="el">
+	   <short>Προβολή στήλης χρόνου που απομένει</short>
+	   
+	 </locale>
+
+	 <locale name="en_CA">
+	   <short>View remaining time column</short>
+	   
+	 </locale>
+
+	 <locale name="en_GB">
+	   <short>View remaining time column</short>
+	   
+	 </locale>
+
+	 <locale name="es">
+	   <short>Ver columna del tiempo restante</short>
+	   
+	 </locale>
+
+	 <locale name="eu">
+	   <short>Ikusi falta den denboraren zutabea</short>
+	   
+	 </locale>
+
+	 <locale name="fi">
+	   <short>Näytä jäljelläolevan ajan sarake</short>
+	   
+	 </locale>
+
+	 <locale name="fr">
+	   <short>Afficher la colonne du temps restant</short>
+	   
+	 </locale>
+
+	 <locale name="hu">
+	   <short>Hátralévő idő oszlop mutatása</short>
+	   
+	 </locale>
+
+	 <locale name="it">
+	   <short>Visualizzare la colonna del tempo rimanente</short>
+	   
+	 </locale>
+
+	 <locale name="lt">
+	   <short>Rodyti likusio laiko stulpelį</short>
+	   
+	 </locale>
+
+	 <locale name="ne">
+	   <short>बाँकी समय स्तम्भ हेर्नुहोस्</short>
+	   
+	 </locale>
+
+	 <locale name="nl">
+	   <short>Kolom resterende tijd tonen</short>
+	   
+	 </locale>
+
+	 <locale name="pl">
+	   <short>Widok kolumny z pozostałym czasem</short>
+	   
+	 </locale>
+
+	 <locale name="pt_BR">
+	   <short>Exibir a coluna de tempo restante</short>
+	   
+	 </locale>
+
+	 <locale name="sk">
+	   <short>Zobraziť stĺpec so zostávajúcim časom</short>
+	   
+	 </locale>
+
+	 <locale name="sq">
+	   <short>Shfaq kolonën e kohës së mbetur</short>
+	   
+	 </locale>
+
+	 <locale name="sv">
+	   <short>Visa kolumnen återstående tid</short>
+	   
+	 </locale>
+
+	 <locale name="uk">
+	   <short>Показувати стовпчик часу, що лишився</short>
+	   
+	 </locale>
+
+	 <locale name="vi">
+	   <short>Xem cột thời gian còn lại</short>
+	   
+	 </locale>
+
+	 <locale name="zh_CN">
+	   <short>查看剩余时间列</short>
+	   
+	 </locale>
+
+	 <locale name="zh_HK">
+	   <short>顯示剩餘時間欄位</short>
+	   
+	 </locale>
+
+	 <locale name="zh_TW">
+	   <short>顯示剩餘時間欄位</short>
+	   
+	 </locale>
+	</schema>
+	
+ 	<schema>
+	 <key>/schemas/apps/gwget2/view_toolbar</key>
+	 <applyto>/apps/gwget2/view_toolbar</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>true</default>
+	 <locale name="C">
+	   <short>View toolbar</short>
+	   <long>Whether to display the toolbar.</long>
+	 </locale>
+
+	 <locale name="ar">
+	   <short>أظهر شريط الأدوات</short>
+	   <long>Whether to display the toolbar.</long>
+	 </locale>
+
+	 <locale name="bg">
+	   <short>Лента с инструменти</short>
+	   <long>Дали да се показва лентата с инструментите.</long>
+	 </locale>
+
+	 <locale name="ca">
+	   <short>Mostra la barra d&apos;eines</short>
+	   <long>Si s&apos;ha de mostrar la barra d&apos;eines</long>
+	 </locale>
+
+	 <locale name="cs">
+	   <short>Zobrazovat lištu nástrojů</short>
+	   <long>Jestli zobrazovat lištu nástrojů.</long>
+	 </locale>
+
+	 <locale name="da">
+	   <short>Vis værktøjslinje</short>
+	   
+	 </locale>
+
+	 <locale name="de">
+	   <short>Werkzeugleiste anzeigen</short>
+	   
+	 </locale>
+
+	 <locale name="el">
+	   <short>Προβολή εργαλειοθήκης</short>
+	   
+	 </locale>
+
+	 <locale name="en_CA">
+	   <short>View toolbar</short>
+	   <long>Whether to display the toolbar.</long>
+	 </locale>
+
+	 <locale name="en_GB">
+	   <short>View toolbar</short>
+	   <long>Whether to display the toolbar.</long>
+	 </locale>
+
+	 <locale name="es">
+	   <short>Ver barra de herramientas</short>
+	   <long>Indica si se debe mostrar la barra de herramientas.</long>
+	 </locale>
+
+	 <locale name="eu">
+	   <short>Ikusi tresna-barra</short>
+	   <long>Tresna-barra bistaratuko den edo ez.</long>
+	 </locale>
+
+	 <locale name="fi">
+	   <short>Näytä työkalupalkki</short>
+	   <long>Näytetäänkö työkalupalkki</long>
+	 </locale>
+
+	 <locale name="fr">
+	   <short>Afficher la barre d&apos;outils</short>
+	   <long>Indique si il faut afficher ou non la barre d&apos;outils.</long>
+	 </locale>
+
+	 <locale name="hu">
+	   <short>Eszköztár mutatása</short>
+	   <long>Megjelenítse-e az eszköztárat?</long>
+	 </locale>
+
+	 <locale name="it">
+	   <short>Visualizzare la barra degli _strumenti</short>
+	   
+	 </locale>
+
+	 <locale name="lt">
+	   <short>Rodyti įrankių juosta</short>
+	   
+	 </locale>
+
+	 <locale name="ne">
+	   <short>उपकरणपट्टी हेर्नुहोस्</short>
+	   <long>उपकरणपट्टी प्रदर्शन गर्ने कि</long>
+	 </locale>
+
+	 <locale name="nl">
+	   <short>Werkbalk tonen</short>
+	   <long>Of de werkbalk getoond dient te worden.</long>
+	 </locale>
+
+	 <locale name="pl">
+	   <short>Widok paska narzędziowego</short>
+	   
+	 </locale>
+
+	 <locale name="pt_BR">
+	   <short>Exibir barra de ferramentas</short>
+	   
+	 </locale>
+
+	 <locale name="sk">
+	   <short>Zobraziť nástrojovú lištu</short>
+	   <long>Či zobraziť nástrojovú lištu.</long>
+	 </locale>
+
+	 <locale name="sq">
+	   <short>Shfaq panelin e veglave</short>
+	   
+	 </locale>
+
+	 <locale name="sv">
+	   <short>Visa verktygsrad</short>
+	   <long>Huruvida verktygsraden ska visas eller inte.</long>
+	 </locale>
+
+	 <locale name="uk">
+	   <short>Показувати панель інструментів</short>
+	   <long>Чи відображати рядок стану.</long>
+	 </locale>
+
+	 <locale name="vi">
+	   <short>Xem thanh công cụ</short>
+	   <long>Có nên hiển thị thanh công cụ hay không.</long>
+	 </locale>
+
+	 <locale name="zh_CN">
+	   <short>查看工具栏</short>
+	   <long>是否显示工具栏。</long>
+	 </locale>
+
+	 <locale name="zh_HK">
+	   <short>顯示工具列</short>
+	   <long>是否顯示工具列</long>
+	 </locale>
+
+	 <locale name="zh_TW">
+	   <short>顯示工具列</short>
+	   <long>是否顯示工具列</long>
+	 </locale>
+	</schema>
+
+	<schema>
+	 <key>/schemas/apps/gwget2/view_statusbar</key>
+	 <applyto>/apps/gwget2/view_statusbar</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>true</default>
+	 <locale name="C">
+	   <short>View statusbar</short>
+	   <long>Whether to display the statusbar.</long>
+	 </locale>
+
+	 <locale name="ar">
+	   <short>أظهر شريط الحالة</short>
+	   <long>Whether to display the statusbar.</long>
+	 </locale>
+
+	 <locale name="bg">
+	   <short>Показване на лентата за състоянието</short>
+	   <long>Дали да се показва лентата за състоянието.</long>
+	 </locale>
+
+	 <locale name="ca">
+	   <short>Mostra la barra d&apos;estat</short>
+	   <long>Si s&apos;ha de mostrar la barra d&apos;estat.</long>
+	 </locale>
+
+	 <locale name="cs">
+	   <short>Zobrazovat stavovou lištu</short>
+	   <long>Jestli zobrazovat stavovou lištu.</long>
+	 </locale>
+
+	 <locale name="en_CA">
+	   <short>View statusbar</short>
+	   <long>Whether to display the statusbar.</long>
+	 </locale>
+
+	 <locale name="en_GB">
+	   <short>View statusbar</short>
+	   <long>Whether to display the statusbar.</long>
+	 </locale>
+
+	 <locale name="es">
+	   <short>Ver barra de estado</short>
+	   <long>Indica si se debe mostrar la barra de estado.</long>
+	 </locale>
+
+	 <locale name="eu">
+	   <short>Ikusi egoera-barra</short>
+	   <long>Egoera-barra bistaratuko den edo ez.</long>
+	 </locale>
+
+	 <locale name="fi">
+	   <short>Näytä tilarivi</short>
+	   <long>Näytetäänkö tilarivi.</long>
+	 </locale>
+
+	 <locale name="fr">
+	   <short>Afficher la barre d&apos;état</short>
+	   <long>Indique si il faut afficher ou non la barre d&apos;état.</long>
+	 </locale>
+
+	 <locale name="hu">
+	   <short>Állapotsor megjelenítése</short>
+	   <long>Megjelenítse-e az állapotsort?</long>
+	 </locale>
+
+	 <locale name="ne">
+	   <short>स्थितिपट्टी हेर्नुहोस्</short>
+	   <long>स्थितिपट्टी प्रदर्शन गर्ने कि</long>
+	 </locale>
+
+	 <locale name="nl">
+	   <short>Statusbalk tonen</short>
+	   <long>Of de statusbalk getoond dient te worden.</long>
+	 </locale>
+
+	 <locale name="sk">
+	   <short>Zobraziť stavovú lištu</short>
+	   <long>Či zobraziť stavovú lištu.</long>
+	 </locale>
+
+	 <locale name="sv">
+	   <short>Visa statusrad</short>
+	   <long>Huruvida statusraden ska visas eller inte.</long>
+	 </locale>
+
+	 <locale name="uk">
+	   <short>Показувати рядок стану</short>
+	   <long>Відображати рядок стану.</long>
+	 </locale>
+
+	 <locale name="vi">
+	   <short>Xem thanh trạng thái</short>
+	   <long>Có nên hiển thị thanh trạng thái hay không.</long>
+	 </locale>
+
+	 <locale name="zh_CN">
+	   <short>查看状态栏</short>
+	   <long>是否显示状态栏。</long>
+	 </locale>
+
+	 <locale name="zh_HK">
+	   <short>顯示狀態列</short>
+	   <long>是否顯示狀態列</long>
+	 </locale>
+
+	 <locale name="zh_TW">
+	   <short>顯示狀態列</short>
+	   <long>是否顯示狀態列</long>
+	 </locale>
+	</schema>
+	
+ 	<schema>
+	 <key>/schemas/apps/gwget2/view_total_size</key>
+	 <applyto>/apps/gwget2/view_total_size</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>true</default>
+	 <locale name="C">
+	   <short>View total size column</short>
+	   <long></long>
+	 </locale>
+
+	 <locale name="ar">
+	   <short>أظهر عمود حجم الملفات</short>
+	   
+	 </locale>
+
+	 <locale name="bg">
+	   <short>Показване на колоната за общия размер</short>
+	   
+	 </locale>
+
+	 <locale name="ca">
+	   <short>Mostra la columna de la mida total</short>
+	   
+	 </locale>
+
+	 <locale name="cs">
+	   <short>Zobrazovat sloupec celkové velikosti</short>
+	   
+	 </locale>
+
+	 <locale name="da">
+	   <short>Vis kolonnen total størrelse</short>
+	   
+	 </locale>
+
+	 <locale name="de">
+	   <short>Spalte für absolute Größe anzeigen</short>
+	   
+	 </locale>
+
+	 <locale name="el">
+	   <short>Προβολή στήλης συνολικού μεγέθους</short>
+	   
+	 </locale>
+
+	 <locale name="en_CA">
+	   <short>View total size column</short>
+	   
+	 </locale>
+
+	 <locale name="en_GB">
+	   <short>View total size column</short>
+	   
+	 </locale>
+
+	 <locale name="es">
+	   <short>Ver columna del tamaño total</short>
+	   
+	 </locale>
+
+	 <locale name="eu">
+	   <short>Ikusi tamaina guztiaren zutabea</short>
+	   
+	 </locale>
+
+	 <locale name="fi">
+	   <short>Näytä lopullisen koon sarake</short>
+	   
+	 </locale>
+
+	 <locale name="fr">
+	   <short>Afficher la colonne de taille totale</short>
+	   
+	 </locale>
+
+	 <locale name="hu">
+	   <short>Teljes méret oszlop mutatása</short>
+	   
+	 </locale>
+
+	 <locale name="it">
+	   <short>Visualizzare la colonna della dimensione totale</short>
+	   
+	 </locale>
+
+	 <locale name="lt">
+	   <short>Rodyti viso dydžio stulpelį</short>
+	   
+	 </locale>
+
+	 <locale name="ne">
+	   <short>जम्मा साइज स्तम्भ हेर्नुहोस्</short>
+	   
+	 </locale>
+
+	 <locale name="nl">
+	   <short>Toon de totale kolomgrootte</short>
+	   
+	 </locale>
+
+	 <locale name="pl">
+	   <short>Widok kolumny z całkowitym rozmiarem</short>
+	   
+	 </locale>
+
+	 <locale name="pt_BR">
+	   <short>Exibir a coluna de tamanho total</short>
+	   
+	 </locale>
+
+	 <locale name="sk">
+	   <short>Zobraziť stĺpec s celkovou veľkosťou</short>
+	   
+	 </locale>
+
+	 <locale name="sq">
+	   <short>Shfaq kolonën e madhësisë së përgjithshme</short>
+	   
+	 </locale>
+
+	 <locale name="sv">
+	   <short>Visa kolumnen total storlek</short>
+	   
+	 </locale>
+
+	 <locale name="uk">
+	   <short>Показувати стовпчик загального розміру</short>
+	   
+	 </locale>
+
+	 <locale name="vi">
+	   <short>Xem cột kích cỡ tổng</short>
+	   
+	 </locale>
+
+	 <locale name="zh_CN">
+	   <short>查看总计大小列</short>
+	   
+	 </locale>
+
+	 <locale name="zh_HK">
+	   <short>顯示全部大小欄位</short>
+	   
+	 </locale>
+
+	 <locale name="zh_TW">
+	   <short>顯示全部大小欄位</short>
+	   
+	 </locale>
+	</schema>
+
+ 	<schema>
+	 <key>/schemas/apps/gwget2/network_mode</key>
+	 <applyto>/apps/gwget2/network_mode</applyto>
+	 <owner>gwget</owner>
+	 <type>string</type>
+	 <default>direct</default>
+	 <locale name="C">
+	   <short></short>
+	   <long></long>
+	 </locale>
+	</schema>
+	
+	<schema>
+	 <key>/schemas/apps/gwget2/http_proxy</key>
+	 <applyto>/apps/gwget2/http_proxy</applyto>
+	 <owner>gwget</owner>
+	 <type>string</type>
+	 <default></default>
+	 <locale name="c">
+	   <short></short>
+	   <long></long>
+	 </locale>
+	</schema>
+	
+	<schema>
+	 <key>/schemas/apps/gwget2/http_proxy_port</key>
+	 <applyto>/apps/gwget2/http_proxy_port</applyto>
+	 <owner>gwget</owner>
+	 <type>int</type>
+	 <default>8080</default>
+	 <locale name="c">
+	   <short></short>
+	   <long></long>
+	 </locale>
+	</schema>
+	
+	<schema>
+	 <key>/schemas/apps/gwget2/proxy_uses_auth</key>
+	 <applyto>/apps/gwget2/proxy_uses_auth</applyto>
+	 <owner>gwget</owner>
+	 <type>bool</type>
+	 <default>false</default>
+	 <locale name="c">
+	   <short></short>
+	   <long></long>
+	 </locale>
+	</schema>
+	
+	<schema>
+	 <key>/schemas/apps/gwget2/proxy_user</key>
+	 <applyto>/apps/gwget2/proxy_user</applyto>
+	 <owner>gwget</owner>
+	 <type>string</type>
+	 <default></default>
+	 <locale name="c">
+	   <short></short>
+	   <long></long>
+	 </locale>
+	</schema>
+	
+	<schema>
+	 <key>/schemas/apps/gwget2/proxy_password</key>
+	 <applyto>/apps/gwget2/proxy_password</applyto>
+	 <owner>gwget</owner>
+	 <type>string</type>
+	 <default></default>
+	 <locale name="c">
+	   <short></short>
+	   <long></long>
+	 </locale>
+	</schema>
+	
+ </schemalist>
+</gconfschemafile>
