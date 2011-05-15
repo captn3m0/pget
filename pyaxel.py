@@ -250,13 +250,16 @@ class FetchData(threading.Thread):
             state_fd.close()
 
 #Test an entire thread list for alive status
+#A thread list is alive if at least one of them is alive
 def is_thread_list_alive(list):
 	for t in list:
-		if t.is_alive() == False :
-			return False
-	return True
+		if t.is_alive() == True :
+			ret = True
+	return False
 
 def download(url, options=None,callback=None):
+	print 'inside download function'
+	
 	global progress, complete, fetch_threads
 	if options == None:
 		options = config.Pconfig()
@@ -328,12 +331,9 @@ def download(url, options=None,callback=None):
 						1024 - conn_state.elapsed_time)
 			'''
 			progress = pbar.display_progress()
-			print progress
 			sys.stdout.flush()
 			time.sleep(1)	#Doesnt make sense to eat up resources in updating progress
 			
-		#print pbar.display_progress()
-
 		# at this point we are sure dwnld completed and can delete the
 		# state file and move the dwnld to output file from .part file
 		complete = True
@@ -341,7 +341,8 @@ def download(url, options=None,callback=None):
 			callback()
 		os.remove(state_file)
 		os.rename(output_file+".part", output_file)
-
+		print 'tc' , threading.active_count()
+		
 	except KeyboardInterrupt, k:
 		for thread in fetch_threads:
 			thread.need_to_quit = True

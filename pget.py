@@ -83,14 +83,18 @@ class Pget:
 		if saveTo > -1 :		#if user choose a folder
 			options.output_folder = self.combo.get_model()[saveTo][0]
 		self.combo.destroy()
-		self.combo = None		
+		self.combo = None
 		self.new_dlg.get_widget("new_window").hide()
 		self.new_dlg.get_widget("new_window").destroy()					#destroy the new_download window
 		#Start download job in a new thread
+		print 'd2'
 		w = DownloadWorker().set_url(url).set_options(options)		#Create an instance of the thread
-		w.start()								#Start the thread
+		print 'd3'
 		self.workers.append(w)					#Append the worker to our list
-		
+		print 'd4'
+		w.start()								#Start the thread		
+		print 'is w started ?'
+		sys.stdout.flush()
 	def on_main_window_destroy(self,*args):
 		for worker in self.workers:
 			worker.quit()
@@ -111,9 +115,14 @@ class DownloadWorker(threading.Thread):
 		#Function is called when download is completed
 		print 'Download Complete'
 	def run(self):
+		print 'inside run function'
+		sys.stdout.flush()
 		self.pyaxel = pyaxel
-		print self.pyaxel
+		print 'l2'
+		sys.stdout.flush()
 		self.pyaxel.download(self.url,self.options,self.complete_callback)
+		print 'l3'
+		sys.stdout.flush()
 	def progress(self):
 		if self.pyaxel:
 			return self.pyaxel.progress
